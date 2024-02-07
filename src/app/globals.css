@@ -2,32 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'GrandHotel';
+  src: url("../assets/fonts/GrandHotel-Regular.ttf");
+}
+@font-face {
+  font-family: 'BalletRegular';
+  src: url("../assets/fonts/Ballet-Regular-VariableFont_opsz.ttf");
+}
+@font-face {
+  font-family: 'DeliciousHandrawn';
+  src: url("../assets/fonts/DeliciousHandrawn-Regular.ttf");
+}
+@font-face {
+  font-family: 'EduRegular';
+  src: url("../assets/fonts/EduVICWANTBeginner-Regular.ttf");
+}
+@font-face {
+  font-family: 'NeonderthawRegular';
+  src: url("../assets/fonts/Neonderthaw-Regular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  @apply scroll-smooth overflow-hidden;
+}
+html, body {
+  @apply h-full w-full;
+}
+* {
+  @apply box-border m-0 p-0;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 
+*::-webkit-scrollbar {
+  display: none !important;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.reveals {
+  @apply transition-all duration-700 ease-in-out;
+}
+
+.aos-animate {
+  @apply translate-x-0 translate-y-0 opacity-100
 }
