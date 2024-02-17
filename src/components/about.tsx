@@ -1,4 +1,11 @@
 import { FaSquareGithub, FaSquareTwitter, FaLinkedin } from "react-icons/fa6";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
+
+import GithubIcon from "./3d-loaders/github-icon";
+import LinkedinIcon from "./3d-loaders/linkedin-icon";
+import YoutubeIcon from "./3d-loaders/youtube-icon";
 
 export default function About() {
  return (
@@ -17,10 +24,22 @@ export default function About() {
      <h2 className="text-3xl font-bold">Hi! This is Devaraj.</h2>
      <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
      <a href="#" className="text-blue-700">Checkout my resume</a>
-     <div className="flex gap-5">
-     <FaLinkedin size={50} color="blue"/>
-     <FaSquareGithub size={50} color="blue"/>
-     <FaSquareTwitter size={50} color="blue"/>
+     <div className="flex gap-5 w-full">
+      <Canvas camera={{ position: [0, 0, 2] }}>
+       <Suspense fallback={null}>
+        <OrbitControls
+         enableZoom={false}
+         maxPolarAngle={Math.PI / 2}
+         minPolarAngle={Math.PI / 2}
+         maxAzimuthAngle={Math.PI / 2}
+        />
+        <pointLight intensity={8} position={[8,6,0]} />
+        <ambientLight intensity={4} />
+        <GithubIcon rotation={[1.54, 0, 0]} position={[-2,0,0]} />
+        <LinkedinIcon rotation={[1.54,0,0]} />
+        <YoutubeIcon rotation={[1.54,0,0]} position={[2,0,0]} />
+       </Suspense>
+      </Canvas>
      </div>
     </div>
    </article>

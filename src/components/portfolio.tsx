@@ -1,7 +1,35 @@
+"use client"
+
 export default function Portfolio() {
- return(
-  <main className="min-h-svh w-svw bg-white">
-   portfolio
+ const _projects = [
+  { name: "PROJECT - 1" },
+  { name: "PROJECT - 2" },
+  { name: "PROJECT - 3" },
+  { name: "PROJECT - 4" },
+  { name: "PROJECT - 5" },
+  { name: "PROJECT - 6" },
+  { name: "PROJECT - 7" },
+  { name: "PROJECT - 8" },
+ ];
+ const getPosition = (i:number) => `${(i%4 === 0 || i%4 === 1) ? "-" : ""}translate-x-40`;
+ const getRandomDelay = () => Math.floor(Math.random()*500);
+ return (
+  <main className="min-h-svh w-svw p-5 sm:p-10 flex flex-col items-center justify-start gap-5 sm:gap-10">
+   <header className="text-4xl text-shadow-sm font-bold text-white">
+    <h2 className="translate-y-40 opacity-0 reveals">
+     WHAT HAVE I DONE SO FAR
+    </h2>
+   </header>
+   <section className="grid sm:grid-cols-2 lg:grid-cols-4 w-full gap-5 sm:gap-10">
+    {_projects.map((project, index) => (
+    <article
+     key={index}
+     className={`relative flex-1 basis-80 aspect-portrait rounded-xl ${getPosition(index)} opacity-0 reveals`}>
+      <aside className="absolute bg-slate-600 h-full w-full -z-40 overflow-hidden rounded-xl opacity-30"></aside>
+      <h1 className="font-bold text-2xl text-center text-white p-5">{project.name}</h1>
+     </article>
+    ))}
+   </section>
   </main>
  );
 }

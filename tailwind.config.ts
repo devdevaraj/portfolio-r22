@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        "portrait": "4/5"
+      },
       textShadow: {
         "sm": "2px 2px 2px var(--tw-shadow-color)"
       },
