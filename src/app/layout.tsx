@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 
 import { StarsCanvas } from "@r22/components/star-background";
 import Scrollbar from "@r22/components/scrollbar";
-import Navbar from "@r22/components/navbar";
+import NavMenu from "@r22/components/nav-menu";
 import { GlobalContext } from "@r22/providers/context-provider";
 import { cn } from "@r22/lib/utils";
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <GlobalContext>
             <StarsCanvas />
             <Scrollbar />
-            <Navbar />
+            <NavMenu/>
             {children}
         </GlobalContext>
       </body>

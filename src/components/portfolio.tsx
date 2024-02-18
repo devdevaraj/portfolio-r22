@@ -1,4 +1,5 @@
 "use client"
+import { Tilt } from "react-tilt";
 
 export default function Portfolio() {
  const _projects = [
@@ -11,8 +12,8 @@ export default function Portfolio() {
   { name: "PROJECT - 7" },
   { name: "PROJECT - 8" },
  ];
- const getPosition = (i:number) => `${(i%4 === 0 || i%4 === 1) ? "-" : ""}translate-x-40`;
- const getRandomDelay = () => Math.floor(Math.random()*500);
+ const getPosition = (i: number) => `${(i % 4 === 0 || i % 4 === 1) ? "-" : ""}translate-x-40`;
+ const getRandomDelay = () => Math.floor(Math.random() * 500);
  return (
   <main className="min-h-svh w-svw p-5 sm:p-10 flex flex-col items-center justify-start gap-5 sm:gap-10">
    <header className="text-4xl text-shadow-sm font-bold text-white">
@@ -22,11 +23,19 @@ export default function Portfolio() {
    </header>
    <section className="grid sm:grid-cols-2 lg:grid-cols-4 w-full gap-5 sm:gap-10">
     {_projects.map((project, index) => (
-    <article
-     key={index}
-     className={`relative flex-1 basis-80 aspect-portrait rounded-xl ${getPosition(index)} opacity-0 reveals`}>
-      <aside className="absolute bg-slate-600 h-full w-full -z-40 overflow-hidden rounded-xl opacity-30"></aside>
-      <h1 className="font-bold text-2xl text-center text-white p-5">{project.name}</h1>
+     <article
+      key={index}
+      className={`flex-1 basis-80 aspect-portrait rounded-xl ${getPosition(index)} opacity-0 reveals`}>
+      <Tilt
+      options={{
+       max: 45,
+       scale:1,
+       speed: 450
+      }} 
+      className="h-full w-full relative">
+       <aside className="absolute bg-slate-600 h-full w-full -z-40 overflow-hidden rounded-xl opacity-30"></aside>
+       <h1 className="font-bold text-2xl text-center text-white p-5">{project.name}</h1>
+      </Tilt>
      </article>
     ))}
    </section>
