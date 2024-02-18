@@ -1,7 +1,3 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Suspense } from "react";
-
 import LightCanvas from "./common/light-canvas";
 import GithubIcon from "./3d-loaders/github-icon";
 import LinkedinIcon from "./3d-loaders/linkedin-icon";
@@ -24,11 +20,13 @@ export default function About() {
      <h2 className="text-3xl font-bold">Hi! This is Devaraj.</h2>
      <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
      <a href="#" className="text-blue-700">Checkout my resume</a>
-     <div className="flex gap-5 w-full">
+     <div className="flex gap-5">
       <LightCanvas
        canvas={{ camera: { position: [0, 0, 2] }, children: <></> }}
        point={{ intensity: 8, position: [8, 6, 0] }}
        ambient={{ intensity: 4 }}
+       style={{ width: 100 }}
+       orbitControls={true}
       >
        <GithubIcon rotation={[1.54, 0, 0]} position={[0, 0, 0]} />
       </LightCanvas>
@@ -36,8 +34,19 @@ export default function About() {
        canvas={{ camera: { position: [0, 0, 2] }, children: <></> }}
        point={{ intensity: 8, position: [8, 6, 0] }}
        ambient={{ intensity: 4 }}
+       style={{ width: 100 }}
+       orbitControls={true}
       >
-       <GithubIcon rotation={[1.54, 0, 0]} position={[0, 0, 0]} />
+       <LinkedinIcon rotation={[1.54, 0, 0]} />
+      </LightCanvas>
+      <LightCanvas
+       canvas={{ camera: { position: [0, 0, 2] }, children: <></> }}
+       point={{ intensity: 8, position: [8, 6, 0] }}
+       ambient={{ intensity: 4 }}
+       style={{ width: 100 }}
+       orbitControls={true}
+      >
+       <YoutubeIcon rotation={[1.54, 0, 0]} position={[0, 0, 0]} />
       </LightCanvas>
      </div>
     </div>
@@ -45,19 +54,3 @@ export default function About() {
   </section >
  );
 }
-
-
-{/* <Canvas camera={{ position: [0, 0, 2] }}>
-      <Suspense fallback={null}>
-       <OrbitControls
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-        maxAzimuthAngle={Math.PI / 2}
-       />
-       <pointLight intensity={8} position={[8, 6, 0]} />
-       <ambientLight intensity={4} />
-       <LinkedinIcon rotation={[1.54, 0, 0]} />
-       <YoutubeIcon rotation={[1.54, 0, 0]} position={[2, 0, 0]} />
-      </Suspense>
-     </Canvas> */}
