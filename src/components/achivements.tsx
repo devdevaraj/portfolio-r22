@@ -4,7 +4,7 @@ export default function Achivements() {
  const _actives = [28, 38, 40, 48, 49, 50, 52, 58, 59, 60, 61, 62, 68, 70, 71, 72, 80, 82, 92];
  const getPos = (num: number) => _actives.findIndex(i => i === num) % 2 === 0 ? "translate-y-40" : "translate-x-40";
  return (
-  <main className="h-svh w-svw flex flex-col py-20">
+  <main className="h-svh w-svw flex flex-col py-20 overflow-x-hidden">
    <header className="h-24 w-full flex flex-col items-center justify-center gap-1 translate-y-40 opacity-0 reveals">
     <h1 className="text-white text-5xl font-bold">Achivements</h1>
     <span className="block h-1 bg-white w-40 relative">

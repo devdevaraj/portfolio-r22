@@ -10,7 +10,7 @@ import useTransition from "@r22/lib/aos";
 export default function Home() {
   useTransition();
   return (
-    <main className="min-h-svh w-full" id="page">
+    <main className="min-h-svh w-full overflow-x-hiddens" id="page">
       <Welcome/>
       <About/>
       <Achivements />

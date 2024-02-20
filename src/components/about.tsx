@@ -5,7 +5,7 @@ import YoutubeIcon from "./3d-loaders/youtube-icon";
 
 export default function About() {
  return (
-  <section className="h-svh w-svw flex p-5 pt-20 flex-row flex-wrap" id="about">
+  <section className="h-svh w-svw flex p-5 pt-20 flex-row flex-wrap overflow-x-hidden" id="about">
    <aside className="text-white flex-grow basis-[512px]">
     <div className="h-full w-full flex items-center justify-center lg:p-40">
      <div className="h-full aspect-[3/4] bg-white reveals -translate-x-40 opacity-0"></div>

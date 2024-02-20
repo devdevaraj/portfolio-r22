@@ -15,7 +15,7 @@ export default function Portfolio() {
  const getPosition = (i: number) => `${(i % 4 === 0 || i % 4 === 1) ? "-" : ""}translate-x-40`;
  const getRandomDelay = () => Math.floor(Math.random() * 500);
  return (
-  <main className="min-h-svh w-svw p-5 sm:p-10 flex flex-col items-center justify-start gap-5 sm:gap-10">
+  <main className="min-h-svh w-svw p-5 sm:p-10 flex flex-col items-center justify-start gap-5 sm:gap-10 overflow-x-hidden">
    <header className="text-4xl text-shadow-sm font-bold text-white">
     <h2 className="translate-y-40 opacity-0 reveals">
      WHAT HAVE I DONE SO FAR
