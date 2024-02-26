@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { _achivements } from "@r22/data/achivements";
+import { techs } from "@r22/data/technologies";
 
 export default function Achivements() {
 
- let temp = [..._achivements];
+ let temp = [...techs];
  let newArray = [];
 
- let max = 19;
+ let max = 23;
 
  for (let i = 1; i < max; i += 2) {
   if (i < max / 2) {
@@ -35,7 +36,7 @@ export default function Achivements() {
           key={y}
           className={`size-12 sm:size-20 md:size-26 lg:size-28 p-1 flex-shrink-0 flex-grow-0 bg-slate-800 rounded-xl ${(j) % 2 == 0 ? "translate-y-48" : "translate-x-48"} opacity-0 reveals`}>
           <aside className="h-full w-full flex items-center justify-center">
-           <Image src={"/loading-circle.svg"} width={"50"} height={"50"} className="animate-spin" alt="Loading" />
+           <Image src={x.length !== 0 ? `/tech/${x}` : `/loading-circle.svg`} width={"60"} height={"60"} className={`${x.length === 0 ? "animate-spin" : "-rotate-45"}`} alt="Loading" />
           </aside>
          </section>
         ))}
