@@ -1,10 +1,19 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 import { _skillsLength } from "./src/data/skills";
+import { log } from "console";
 
-const delays = new Array(_skillsLength).fill(50).map((i,j) => i*j);
-const safeList = delays.map(i => `delay-[${i}ms]`);
+const breakPoints = ["","sm:","md:","lg:","xl:"];
+const delays = new Array(6).fill(100).map((i,j) => i*j);
+const baseDelays = delays.map(i => `delay-[${i}ms]`);
+const delaySafelist = breakPoints.map(bp => baseDelays.map(bd => `${bp}${bd}`)).flat();
 
+const flexSafelist = breakPoints.map(i => `${i}flex`);
+const hiddenSafelist = breakPoints.map(i => `${i}hidden`);
+
+
+
+const safeList = [...delaySafelist, ...flexSafelist, ...hiddenSafelist];
 
 const config: Config = {
   content: [
