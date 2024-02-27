@@ -3,7 +3,9 @@ import { Inter } from "next/font/google";
 
 import { StarsCanvas } from "@r22/components/star-background";
 import Scrollbar from "@r22/components/scrollbar";
+import Cursor from "@r22/components/cursor";
 import NavMenu from "@r22/components/nav-menu";
+import NavBar from "@r22/components/navbar";
 import { GlobalContext } from "@r22/providers/context-provider";
 import { cn } from "@r22/lib/utils";
 
@@ -21,10 +23,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={cn("bg-[#030014] overflow-y-auto overflow-x-hidden", inter.className)}>
         <GlobalContext>
-            <StarsCanvas />
-            <Scrollbar />
-            <NavMenu/>
-            {children}
+          {/* <Cursor /> */}
+          <StarsCanvas />
+          <Scrollbar />
+          <NavBar />
+          <NavMenu />
+          {children}
         </GlobalContext>
       </body>
     </html>

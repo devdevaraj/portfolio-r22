@@ -1,3 +1,4 @@
 export type GlobalContextType = {
- tets?: number
+ tets?: number,
+ isNavOpen?: boolean
 }

@@ -56,6 +56,8 @@
 55.c++
 56.php
 57.laravel
+58.Socket.io
+59.
 */
 
 export const techs = ["angular.svg","appwrite.svg","aws.svg","babel.svg","bash.svg","blender.svg","bootstrap5.svg","bunjs.svg","cassandra.svg","cpp.svg","css3.svg","dart.svg","django.svg","docker.svg","expressjs.svg","fastapi.svg","firebase.svg","flutter.svg","gcp.svg","git.svg","graphql.svg","html5.svg","javascript.svg","jquery.svg","kubernetes.svg","laravel.svg","linux.svg","mongodb.svg","mysql.svg","nextjs.svg","nginx.svg","nodejs.svg","nuxt.svg","opencv.svg","php.svg","postgresql.svg","prisma.svg","python.svg","reactjs.svg","reactquery.svg","redis.svg","redux.svg","rust.svg","sass.svg","scylladb.svg","svelte.svg","tailwindcss.svg","threejs.svg","trpc.svg","typescript.svg","unrealengine.svg","vue.svg","webpack.svg","zod.svg","","","","","","",""];

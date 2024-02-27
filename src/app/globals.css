@@ -25,6 +25,7 @@
 
 html {
   @apply scroll-smooth overflow-hidden;
+  cursor: url("/loading-circle.svg"), auto !important;
 }
 html,
 body {
