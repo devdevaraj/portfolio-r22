@@ -1,5 +1,5 @@
 "use client"
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 import { effect } from "@preact/signals-react";
 import { isNavOpen } from "./nav-menu";
 
