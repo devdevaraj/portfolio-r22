@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Tic Tac Toe",
+    "assets_path": "/projects/tic-tac-toe",
+    "thumbnail": "thumbnail.png",
+    "images": ["image1.png", "image2.png"],
+    "tnt": ["HTML", "CSS", "JavaScript"],
+    "descriptions": ""
+  }
+]
