@@ -6,5 +6,13 @@
     "images": ["image1.png", "image2.png"],
     "tnt": ["HTML", "CSS", "JavaScript"],
     "descriptions": ""
+  },
+  {
+    "name": "Hotstar clone",
+    "assets_path": "",
+    "thumbnail": "thumbnail.png",
+    "images": [],
+    "tnt": [],
+    "descriptions": ""
   }
 ]
