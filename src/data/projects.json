@@ -22,5 +22,13 @@
     "images": [],
     "tnt": [],
     "descriptions": ""
+  },
+  {
+    "name": "Calculator",
+    "assets_path": "",
+    "thumbnail": "thumbnail.png",
+    "images": [],
+    "tnt": [],
+    "descriptions": ""
   }
 ]
