@@ -71,11 +71,12 @@ export const TABLE = ({ data }: { data: Array<Array<string | null>>}) => {
 export const A = ({ link, children }: { link: string, children: string }) => <a href={link} target="_blank" className="p-2 text-blue-700">{children} ICON</a>;
 
 
-export const TREE = ({ data, space }: {data: Object | string, space: string}): ReactNode => {
+export const TREE = ({ data, space }: {data: Record<string, any> | string, space: string}): ReactNode => {
+
  if(!data) return "";
  if(typeof(data) === "string") return space + data;
  return <div className="whitespace-pre font-mono">{
-  Object.keys(data)?.map<ReactNode>((key: String, index) => <Fragment key={index}>{space}{key}<br/>{TREE({data: data[key], space: space.replaceAll("_", " ") + "  |__"})}</Fragment>) || ""
+  Object.keys(data)?.map<ReactNode>((key, index) => <Fragment key={index}>{space}{key}<br/>{TREE({data: data[key], space: space.replaceAll("_", " ") + "  |__"})}</Fragment>) || ""
   }
  </div>;
 };
