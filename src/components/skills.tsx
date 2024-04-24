@@ -1,5 +1,6 @@
 "use client"
-import { _skills } from "@r22/data/skills";
+// import { _skills } from "@r22/data/skills";
+import _skills from "@r22/data/skills.json";
 
 export default function Skills() {
  const breakpoints: { [key: string]: number} = {
@@ -36,7 +37,7 @@ export default function Skills() {
        <article className="h-5 w-1 border-2 border-slate-500"></article>
        <article className="flex-1 w-full border-4 border-slate-500 rounded-sm relative">
         <article className="bg-slate-700 absolute -z-10 opacity-50 h-full w-full"></article>
-        <aside className="text-white h-full w-full flex flex-col items-center justify-center">SKILL - 1</aside>
+        <aside className="text-white h-full w-full flex flex-col items-center justify-center">{item.name}</aside>
        </article>
        <article className="h-5 w-1 border-2 border-slate-500"></article>
       </article>

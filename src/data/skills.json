@@ -1,19 +1,29 @@
 [
- { "name": "Web application development (MERN , MEAN etc)" },
- { "name": "Android/OIS application development using Flutter" },
- { "name": "Web site development using (Python Django, PHP, etc.)" },
- { "name": "Software testing using selenium (Selenium / Cypress)" },
- { "name": "Native Desktop application development using C++" },
- { "name": "Source control (git / Helix core)" },
- { "name": "DevOps " },
- { "name": "Cloud computing" },
- { "name": "Networking knowledge" },
- { "name": "3D modeling Using (Blender / Maya 3D)" },
- { "name": "Game development using (Unreal engine / Unity)" },
- { "name": "Cyber security" },
- { "name": "Cryptography, Bloack chainain and Web3  (Hyper ledger)" },
- { "name": "Linux and terminal automation" },
- { "name": "Electronics and Computer Hardware" },
- { "name": "Data structures, Algorithms and optimisation" },
- { "name": "Internet of things" }
+  { "name": "Web application development (MERN , MEAN etc)", "image": "" },
+  { "name": "Android/OIS application development using Flutter", "image": "" },
+  {
+    "name": "Web site development using (Python Django, PHP, etc.)",
+    "image": ""
+  },
+  {
+    "name": "Software testing using selenium (Selenium / Cypress)",
+    "image": ""
+  },
+  { "name": "Native Desktop application development using C++", "image": "" },
+  { "name": "Source control (git / Helix core)", "image": "" },
+  { "name": "DevOps ", "image": "" },
+  { "name": "Cloud computing", "image": "" },
+  { "name": "Networking knowledge", "image": "" },
+  { "name": "3D modeling Using (Blender / Maya 3D)", "image": "" },
+  { "name": "Game development using (Unreal engine / Unity)", "image": "" },
+  { "name": "Cyber security", "image": "" },
+  {
+    "name": "Cryptography, Bloack chainain and Web3  (Hyper ledger)",
+    "image": ""
+  },
+  { "name": "Linux and terminal automation", "image": "" },
+  { "name": "Electronics and Computer Hardware", "image": "" },
+  { "name": "Data structures, Algorithms and optimisation", "image": "" },
+  { "name": "Internet of things", "image": "" },
+  { "name": "Never Stop Learning", "image": "" }
 ]
