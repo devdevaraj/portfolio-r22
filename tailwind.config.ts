@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 import { _skillsLength } from "./src/data/skills";
-import { log } from "console";
 
 const breakPoints = ["","sm:","md:","lg:","xl:"];
 const delays = new Array(6).fill(100).map((i,j) => i*j);
@@ -52,7 +51,9 @@ const config: Config = {
         }),
       },
       { values: theme('textShadow')})
-    })
+    }),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 };
 export default config;
