@@ -23,7 +23,7 @@ export default function TimelineScene({innerRef}: {innerRef: Ref<Group>}) {
  useFrame((state, delta) => {
   const x = pointer.x / window.innerWidth;
   const y = pointer.y / window.innerHeight;
-  console.log(x,y);
+  // console.log(x,y);
   camera.rotation.set(x*100, y*100, 0);
  });
  return (

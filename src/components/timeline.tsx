@@ -18,7 +18,7 @@ export default function Timeline() {
   const OH = height! - clientHeight.value;
   const TL = TS > scrollTop.value ? 0 : OS > OH ? OH : OS;
   scroll = TL / OH;
-  console.log(scroll);
+  // console.log(scroll);
   if (innerRef.current) innerRef.current.position.set(0, 0, 500 * scroll);
  })
  return (
