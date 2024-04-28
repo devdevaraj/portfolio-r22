@@ -1,8 +1,10 @@
 {
   "install-nodejs": {
-    "headding": "Instructions to install NodeJS"
+    "headding": "Instructions to install NodeJS",
+    "body": "@r22/components/tutorials/install-nodejs"
   },
   "install-mongodb": {
-    "headding": "Instructions to install NodeJS"
+    "headding": "Instructions to install NodeJS",
+    "body": "@r22/components/tutorials/install-mongodb"
   }
 }

@@ -24,7 +24,7 @@ export default function Timeline() {
  return (
   <main
    ref={ref}
-   className="h-[500vh] relative">
+   className="h-[400vh] relative">
    <section
     className="sticky top-0 h-screen text-3xl transition duration-500">
     <Canvas camera={{ position: [0, 0, 50] }}>

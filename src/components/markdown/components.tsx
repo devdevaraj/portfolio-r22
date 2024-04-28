@@ -43,7 +43,7 @@ export const CODE = ({ children }: { children: string }) => {
 )}
 export const IMG = ({ url }: { url: string }) => <Image src={url || "/next.svg"} alt="image" loading="lazy" width={0} height={0} className="w-fit max-w-[600px] object-cover my-3" />
 
-export const TABLE = ({ data }: { data: Array<Array<string | null>>}) => {
+export const TABLE = ({ data }: { data: Array<Array<string | ReactNode | null>>}) => {
  // console.log(data.splice(1));
  
  return(

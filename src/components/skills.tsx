@@ -40,7 +40,7 @@ export default function Skills() {
                 <article className="bg-slate-700 absolute -z-10 opacity-50 h-full w-full"></article>
                 <aside className="text-white h-full w-full flex flex-col items-center justify-start">
                   <section className="h-1/2 w-full bg-red-50 relative">
-                    <Image src={`/skills/${item["image"]}`} width={500} height={300} alt="Skill image" className="w-full h-full object-cover" />
+                    <Image src={`/skills/${item["image"]}`} width={500} height={300} alt="Skill image" className="w-full h-full object-cover" loading="lazy" />
                     <h2 className="p-2 text-[0.9rem] 2xl:text-sm absolute bottom-0">
                       {item.name}
                     </h2>
