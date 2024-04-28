@@ -1,29 +1,29 @@
 [
-  { "name": "Web application development (MERN , MEAN etc)", "image": "" },
-  { "name": "Android/OIS application development using Flutter", "image": "" },
+  { "name": "Web application development (MERN , MEAN etc)", "image": "web-development.png" },
+  { "name": "Android/OIS application development using Flutter", "image": "web-development.png" },
   {
     "name": "Web site development using (Python Django, PHP, etc.)",
-    "image": ""
+    "image": "web-development.png"
   },
   {
     "name": "Software testing using selenium (Selenium / Cypress)",
-    "image": ""
+    "image": "web-development.png"
   },
-  { "name": "Native Desktop application development using C++", "image": "" },
-  { "name": "Source control (git / Helix core)", "image": "" },
-  { "name": "DevOps ", "image": "" },
-  { "name": "Cloud computing", "image": "" },
-  { "name": "Networking knowledge", "image": "" },
-  { "name": "3D modeling Using (Blender / Maya 3D)", "image": "" },
-  { "name": "Game development using (Unreal engine / Unity)", "image": "" },
-  { "name": "Cyber security", "image": "" },
+  { "name": "Native Desktop application development using C++", "image": "web-development.png" },
+  { "name": "Source control (git / Helix core)", "image": "web-development.png" },
+  { "name": "DevOps ", "image": "web-development.png" },
+  { "name": "Cloud computing", "image": "web-development.png" },
+  { "name": "Networking knowledge", "image": "web-development.png" },
+  { "name": "3D modeling Using (Blender / Maya 3D)", "image": "web-development.png" },
+  { "name": "Game development (Unreal engine / Unity)", "image": "web-development.png" },
+  { "name": "Cyber security", "image": "web-development.png" },
   {
     "name": "Cryptography, Bloack chainain and Web3  (Hyper ledger)",
-    "image": ""
+    "image": "web-development.png"
   },
-  { "name": "Linux and terminal automation", "image": "" },
-  { "name": "Electronics and Computer Hardware", "image": "" },
-  { "name": "Data structures, Algorithms and optimisation", "image": "" },
-  { "name": "Internet of things", "image": "" },
-  { "name": "Never Stop Learning", "image": "" }
+  { "name": "Linux and terminal automation", "image": "web-development.png" },
+  { "name": "Electronics and Computer Hardware", "image": "web-development.png" },
+  { "name": "Data structures, Algorithms and optimisation", "image": "web-development.png" },
+  { "name": "Internet of things", "image": "web-development.png" },
+  { "name": "Never Stop Learning", "image": "web-development.png" }
 ]
