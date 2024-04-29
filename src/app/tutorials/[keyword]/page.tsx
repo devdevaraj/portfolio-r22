@@ -26,7 +26,7 @@ console.log(res.data);`}</CODE>
          <TABLE data={[
             ["id", "name", "place"],
             ["1", "hari", "kottha"],
-            ["2", "ravi", <A link="https://mongodb.org">Mongodb</A>],
+            ["2", "ravi", <A key={"mongodb"} link="https://mongodb.org">Mongodb</A>],
             ["3", "Devan", "Cherthala"],
          ]} />
          <A link="https://mongodb.org">Mongodb</A>
