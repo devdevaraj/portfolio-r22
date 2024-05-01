@@ -3,6 +3,7 @@ import { Tilt } from "react-tilt";
 
 import _projects from "@r22/data/projects.json";
 import NoSsr from "@r22/providers/no-ssr";
+import Image from "next/image";
 
 export default function Portfolio() {
 
@@ -43,6 +44,7 @@ export default function Portfolio() {
         className="h-full w-full relative">
         <aside className="absolute bg-slate-600 h-full w-full -z-40 overflow-hidden rounded-xl opacity-30"></aside>
         <h1 className="font-bold text-2xl text-center text-white p-5">{project.name}</h1>
+        <Image src={"/projects/tic-tac-toe/image1.png"} height={200} width={300} alt="Project thumbnail" />
        </Tilt>
       </article>
      ))}
