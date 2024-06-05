@@ -2,6 +2,7 @@
 
 import Welcome from "@r22/components/welcome";
 import About from "@r22/components/about";
+import MainFocus from "@r22/components/main-focus";
 import Technologies from "@r22/components/technologies";
 import Timeline from "@r22/components/timeline";
 import Portfolio from "@r22/components/portfolio";
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="min-h-svh w-full overflow-x-hiddens" id="page">
       <Welcome />
       <About />
+      <MainFocus />
       <Technologies />
       <Timeline />
       <Skills />
