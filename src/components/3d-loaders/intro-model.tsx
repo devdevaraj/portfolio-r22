@@ -10,33 +10,120 @@ import { useFrame, useThree } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
  nodes: {
-  Torus: THREE.Mesh;
-  Torus001: THREE.Mesh;
-  Torus002: THREE.Mesh;
-  Cylinder: THREE.Mesh;
-  Cylinder001: THREE.Mesh;
-  Cylinder002: THREE.Mesh;
-  Cylinder003: THREE.Mesh;
-  Cylinder004: THREE.Mesh;
-  Cylinder005: THREE.Mesh;
-  Cylinder006: THREE.Mesh;
-  Cylinder007: THREE.Mesh;
-  Cube: THREE.Mesh;
-  Cube001: THREE.Mesh;
-  Cube002: THREE.Mesh;
-  Cube003: THREE.Mesh;
-  Cube004: THREE.Mesh;
-  Cube005: THREE.Mesh;
-  Cube006: THREE.Mesh;
-  Cube007: THREE.Mesh;
-  Cube008: THREE.Mesh;
-  Cube009: THREE.Mesh;
-  Cube010: THREE.Mesh;
- };
+  Torus: THREE.Mesh
+  Torus001: THREE.Mesh
+  Torus002: THREE.Mesh
+  Cylinder: THREE.Mesh
+  Cylinder001: THREE.Mesh
+  Cylinder002: THREE.Mesh
+  Cylinder003: THREE.Mesh
+  Cylinder004: THREE.Mesh
+  Cylinder005: THREE.Mesh
+  Cylinder006: THREE.Mesh
+  Cylinder007: THREE.Mesh
+  Cube: THREE.Mesh
+  Cube001: THREE.Mesh
+  Cube002: THREE.Mesh
+  Cube003: THREE.Mesh
+  Cube004: THREE.Mesh
+  Cube005: THREE.Mesh
+  Cube006: THREE.Mesh
+  Cube007: THREE.Mesh
+  Cube008: THREE.Mesh
+  Cube009: THREE.Mesh
+  Cube010: THREE.Mesh
+  Curve: THREE.Mesh
+  Curve001: THREE.Mesh
+  Curve002: THREE.Mesh
+  Curve003: THREE.Mesh
+  Curve011_1: THREE.Mesh
+  Curve011_2: THREE.Mesh
+  Curve011_3: THREE.Mesh
+  Curve011_4: THREE.Mesh
+  Curve012_1: THREE.Mesh
+  Curve012_2: THREE.Mesh
+  Curve012_3: THREE.Mesh
+  Curve012_4: THREE.Mesh
+  Curve005: THREE.Mesh
+  Curve006: THREE.Mesh
+  Curve015_1: THREE.Mesh
+  Curve015_2: THREE.Mesh
+  Curve015_3: THREE.Mesh
+  Curve018_1: THREE.Mesh
+  Curve018_2: THREE.Mesh
+  Curve018_3: THREE.Mesh
+  Curve009: THREE.Mesh
+  Curve010: THREE.Mesh
+  Curve023_1: THREE.Mesh
+  Curve023_2: THREE.Mesh
+  Curve023_3: THREE.Mesh
+  Curve024_1: THREE.Mesh
+  Curve024_2: THREE.Mesh
+  Curve024_3: THREE.Mesh
+  Curve013: THREE.Mesh
+  Curve015: THREE.Mesh
+  Curve016: THREE.Mesh
+  Curve018: THREE.Mesh
+  Curve017: THREE.Mesh
+  Curve019: THREE.Mesh
+  Curve020: THREE.Mesh
+  Curve022_1: THREE.Mesh
+  Curve022_2: THREE.Mesh
+  Curve022_3: THREE.Mesh
+  Curve028: THREE.Mesh
+  Curve028_1: THREE.Mesh
+  Curve028_2: THREE.Mesh
+  Curve016_1: THREE.Mesh
+  Curve016_2: THREE.Mesh
+  Curve016_3: THREE.Mesh
+  Curve026_1: THREE.Mesh
+  Curve026_2: THREE.Mesh
+  Curve026_3: THREE.Mesh
+  Curve025: THREE.Mesh
+  Curve026: THREE.Mesh
+ }
  materials: {
-  ["Material.001"]: THREE.MeshStandardMaterial;
- };
-};
+  Material: THREE.MeshStandardMaterial
+  ['React background']: THREE.MeshStandardMaterial
+  ['Firebase background']: THREE.MeshStandardMaterial
+  ['JS background']: THREE.MeshStandardMaterial
+  ['Angular White']: THREE.MeshStandardMaterial
+  ['Typescript background']: THREE.MeshStandardMaterial
+  ['SVGMat.021']: THREE.MeshStandardMaterial
+  ['Github background']: THREE.MeshStandardMaterial
+  ['HTML5 Background']: THREE.MeshStandardMaterial
+  ['React forground']: THREE.MeshStandardMaterial
+  ['JS forground']: THREE.MeshStandardMaterial
+  ['Firebase 1']: THREE.MeshStandardMaterial
+  ['Firebase 3']: THREE.MeshStandardMaterial
+  ['Firebase 2']: THREE.MeshStandardMaterial
+  ['Pure white']: THREE.MeshStandardMaterial
+  ['SVGMat.019']: THREE.MeshStandardMaterial
+  ['SVGMat.020']: THREE.MeshStandardMaterial
+  ['AWS forground']: THREE.MeshStandardMaterial
+  ['SVGMat.025']: THREE.MeshStandardMaterial
+  ['SVGMat.023']: THREE.MeshStandardMaterial
+  ['SVGMat.024']: THREE.MeshStandardMaterial
+  ['flutter sky blue']: THREE.MeshStandardMaterial
+  ['flutter dark blue']: THREE.MeshStandardMaterial
+  ['flutter medium blue']: THREE.MeshStandardMaterial
+  ['flutter medium blue.001']: THREE.MeshStandardMaterial
+  ['flutter dark blue.001']: THREE.MeshStandardMaterial
+  ['flutter sky blue.001']: THREE.MeshStandardMaterial
+  ['CSS White.001']: THREE.MeshStandardMaterial
+  ['CSS color 2.001']: THREE.MeshStandardMaterial
+  ['CSS color 1.001']: THREE.MeshStandardMaterial
+  ['Angular red 2.001']: THREE.MeshStandardMaterial
+  ['Angular red 1.001']: THREE.MeshStandardMaterial
+  ['Angular White.001']: THREE.MeshStandardMaterial
+  ['CSS White']: THREE.MeshStandardMaterial
+  ['CSS color 2']: THREE.MeshStandardMaterial
+  ['CSS color 1']: THREE.MeshStandardMaterial
+  ['Angular red 2']: THREE.MeshStandardMaterial
+  ['Angular red 1']: THREE.MeshStandardMaterial
+  ['Material.001']: THREE.MeshStandardMaterial
+ }
+}
 
 export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
  const { nodes, materials } = useGLTF("/3d/intro-model.glb") as GLTFResult;
@@ -47,8 +134,8 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
   const x = pointer.x / window.innerWidth;
   const y = pointer.y / window.innerHeight;
   if (modelRef.current) {
-   modelRef.current.rotation.x = x*100;
-   modelRef.current.rotation.y = y*100;
+   modelRef.current.rotation.x = x * 100;
+   modelRef.current.rotation.y = y * 100;
   }
   if (grillRef.current) {
    grillRef.current.rotation.y += delta / 10;
@@ -63,14 +150,14 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Torus.geometry}
-      material={nodes.Torus.material}
+      material={materials.Material}
      />
      <mesh
       name="Torus001"
       castShadow
       receiveShadow
       geometry={nodes.Torus001.geometry}
-      material={nodes.Torus001.material}
+      material={materials.Material}
       scale={1.495}
      />
      <mesh
@@ -78,7 +165,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Torus002.geometry}
-      material={nodes.Torus002.material}
+      material={materials.Material}
       scale={2.455}
      />
      <mesh
@@ -86,7 +173,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder.geometry}
-      material={materials["Material.001"]}
+      material={materials.Material}
       rotation={[-1.572, 0, 0]}
       scale={[0.013, 2.794, 0.013]}
      />
@@ -95,7 +182,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder001.geometry}
-      material={nodes.Cylinder001.material}
+      material={materials.Material}
       rotation={[-1.571, -0.001, 0.785]}
       scale={[0.013, 2.794, 0.013]}
      />
@@ -104,7 +191,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder002.geometry}
-      material={nodes.Cylinder002.material}
+      material={materials.Material}
       rotation={[-Math.PI / 2, -0.001, 1.571]}
       scale={[0.013, 2.794, 0.013]}
      />
@@ -113,7 +200,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder003.geometry}
-      material={nodes.Cylinder003.material}
+      material={materials.Material}
       rotation={[-1.57, -0.001, 2.354]}
       scale={[0.013, 2.794, 0.013]}
      />
@@ -122,7 +209,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder004.geometry}
-      material={nodes.Cylinder004.material}
+      material={materials.Material}
       position={[0, 0, -1.051]}
       rotation={[-Math.PI / 2, -0.001, 1.571]}
       scale={[0.013, 2.794, 0.013]}
@@ -132,7 +219,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder005.geometry}
-      material={nodes.Cylinder005.material}
+      material={materials.Material}
       position={[0, 0, 1.045]}
       rotation={[-Math.PI / 2, -0.001, 1.571]}
       scale={[0.013, 2.794, 0.013]}
@@ -142,7 +229,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder006.geometry}
-      material={nodes.Cylinder006.material}
+      material={materials.Material}
       position={[-1.051, 0, 0]}
       rotation={[-1.572, 0, 0]}
       scale={[0.013, 2.794, 0.013]}
@@ -152,7 +239,7 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
       castShadow
       receiveShadow
       geometry={nodes.Cylinder007.geometry}
-      material={nodes.Cylinder007.material}
+      material={materials.Material}
       position={[1.051, 0, 0]}
       rotation={[-1.572, 0, 0]}
       scale={[0.013, 2.794, 0.013]}
@@ -163,99 +250,523 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
      castShadow
      receiveShadow
      geometry={nodes.Cube.geometry}
-     material={nodes.Cube.material}
+     material={materials['React background']}
      position={[-1.429, 0, -2.61]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.189, 0.386]}
     />
     <mesh
      name="Cube001"
      castShadow
      receiveShadow
      geometry={nodes.Cube001.geometry}
-     material={nodes.Cube001.material}
+     material={materials['Firebase background']}
      position={[-0.685, 0, -1.126]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.191, 0.386]}
     />
     <mesh
      name="Cube002"
      castShadow
      receiveShadow
      geometry={nodes.Cube002.geometry}
-     material={nodes.Cube002.material}
+     material={materials['JS background']}
      position={[-0.005, 0, -2.173]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.196, 0.386]}
     />
     <mesh
      name="Cube003"
      castShadow
      receiveShadow
      geometry={nodes.Cube003.geometry}
-     material={nodes.Cube003.material}
+     material={materials['Angular White']}
      position={[-1.695, 0, -0.398]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.188, 0.386]}
     />
     <mesh
      name="Cube004"
      castShadow
      receiveShadow
      geometry={nodes.Cube004.geometry}
-     material={nodes.Cube004.material}
+     material={materials['Typescript background']}
      position={[-0.384, 0, 0.148]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.191, 0.386]}
     />
     <mesh
      name="Cube005"
      castShadow
      receiveShadow
      geometry={nodes.Cube005.geometry}
-     material={nodes.Cube005.material}
+     material={materials['React background']}
      position={[0.59, 0, -0.671]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.196, 0.386]}
     />
     <mesh
      name="Cube006"
      castShadow
      receiveShadow
      geometry={nodes.Cube006.geometry}
-     material={nodes.Cube006.material}
+     material={materials['SVGMat.021']}
      position={[1.054, 0, 0.385]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.196, 0.386]}
     />
     <mesh
      name="Cube007"
      castShadow
      receiveShadow
      geometry={nodes.Cube007.geometry}
-     material={nodes.Cube007.material}
+     material={materials['Github background']}
      position={[-0.066, 0, 1.286]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.196, 0.386]}
     />
     <mesh
      name="Cube008"
      castShadow
      receiveShadow
      geometry={nodes.Cube008.geometry}
-     material={nodes.Cube008.material}
+     material={materials['React background']}
      position={[-1.44, 0, 1.086]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.189, 0.386]}
     />
     <mesh
      name="Cube009"
      castShadow
      receiveShadow
      geometry={nodes.Cube009.geometry}
-     material={nodes.Cube009.material}
+     material={materials['React background']}
      position={[0.344, 0, 2.551]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.199, 0.386]}
     />
     <mesh
      name="Cube010"
      castShadow
      receiveShadow
      geometry={nodes.Cube010.geometry}
-     material={nodes.Cube010.material}
+     material={materials['HTML5 Background']}
      position={[-1.823, 0, 2.551]}
-     scale={[0.386, 0.029, 0.386]}
+     scale={[0.386, 0.194, 0.386]}
+    />
+    <mesh
+     name="Curve"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve.geometry}
+     material={materials['React forground']}
+     position={[-1.424, 0.225, -2.601]}
+     scale={4.097}
+    />
+    <mesh
+     name="Curve001"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve001.geometry}
+     material={materials['React forground']}
+     position={[-1.424, -0.227, -2.601]}
+     scale={4.097}
+    />
+    <mesh
+     name="Curve002"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve002.geometry}
+     material={materials['JS forground']}
+     position={[0.124, 0.197, -2.018]}
+     scale={[3.92, 1.403, 3.92]}
+    />
+    <mesh
+     name="Curve003"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve003.geometry}
+     material={materials['JS forground']}
+     position={[-0.127, -0.261, -2.018]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-3.92, -1.403, -3.92]}
+    />
+    <group name="Curve012" position={[-0.701, 0.19, -1.138]} scale={[0.582, 1.451, 0.582]}>
+     <mesh
+      name="Curve011_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve011_1.geometry}
+      material={materials['Firebase 1']}
+     />
+     <mesh
+      name="Curve011_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve011_2.geometry}
+      material={materials['Firebase 3']}
+     />
+     <mesh
+      name="Curve011_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve011_3.geometry}
+      material={materials['Firebase 3']}
+     />
+     <mesh
+      name="Curve011_4"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve011_4.geometry}
+      material={materials['Firebase 2']}
+     />
+    </group>
+    <group
+     name="Curve004"
+     position={[-0.674, -0.225, -1.141]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-0.582, -1.451, -0.582]}>
+     <mesh
+      name="Curve012_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve012_1.geometry}
+      material={materials['Firebase 1']}
+     />
+     <mesh
+      name="Curve012_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve012_2.geometry}
+      material={materials['Firebase 3']}
+     />
+     <mesh
+      name="Curve012_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve012_3.geometry}
+      material={materials['Firebase 3']}
+     />
+     <mesh
+      name="Curve012_4"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve012_4.geometry}
+      material={materials['Firebase 2']}
+     />
+    </group>
+    <mesh
+     name="Curve005"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve005.geometry}
+     material={materials['Pure white']}
+     position={[-0.22, 0.191, 0.255]}
+     scale={[3.407, 1.86, 3.407]}
+    />
+    <mesh
+     name="Curve006"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve006.geometry}
+     material={materials['Pure white']}
+     position={[-0.556, -0.26, 0.275]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-3.407, -1.86, -3.407]}
+    />
+    <group name="Curve007" position={[1.073, 0.195, 0.315]} scale={[2.823, 1.835, 2.823]}>
+     <mesh
+      name="Curve015_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve015_1.geometry}
+      material={materials['SVGMat.019']}
+     />
+     <mesh
+      name="Curve015_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve015_2.geometry}
+      material={materials['SVGMat.020']}
+     />
+     <mesh
+      name="Curve015_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve015_3.geometry}
+      material={materials['AWS forground']}
+     />
+    </group>
+    <group
+     name="Curve008"
+     position={[1.033, -0.258, 0.315]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-2.823, -1.835, -2.823]}>
+     <mesh
+      name="Curve018_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve018_1.geometry}
+      material={materials['SVGMat.019']}
+     />
+     <mesh
+      name="Curve018_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve018_2.geometry}
+      material={materials['SVGMat.020']}
+     />
+     <mesh
+      name="Curve018_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve018_3.geometry}
+      material={materials['AWS forground']}
+     />
+    </group>
+    <mesh
+     name="Curve009"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve009.geometry}
+     material={materials['Pure white']}
+     position={[-0.062, 0.196, 1.259]}
+     scale={[3.205, 3.771, 3.205]}
+    />
+    <mesh
+     name="Curve010"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve010.geometry}
+     material={materials['Pure white']}
+     position={[-0.079, -0.261, 1.259]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-3.205, -3.771, -3.205]}
+    />
+    <group name="Curve014" position={[-1.796, 0.228, 2.549]} scale={[2.44, 3.537, 2.44]}>
+     <mesh
+      name="Curve023_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve023_1.geometry}
+      material={materials['SVGMat.025']}
+     />
+     <mesh
+      name="Curve023_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve023_2.geometry}
+      material={materials['SVGMat.023']}
+     />
+     <mesh
+      name="Curve023_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve023_3.geometry}
+      material={materials['SVGMat.024']}
+     />
+    </group>
+    <group
+     name="Curve011"
+     position={[-1.842, -0.227, 2.546]}
+     rotation={[0, 0, 3.142]}
+     scale={[2.44, 3.537, 2.44]}>
+     <mesh
+      name="Curve024_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve024_1.geometry}
+      material={materials['SVGMat.025']}
+     />
+     <mesh
+      name="Curve024_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve024_2.geometry}
+      material={materials['SVGMat.023']}
+     />
+     <mesh
+      name="Curve024_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve024_3.geometry}
+      material={materials['SVGMat.024']}
+     />
+    </group>
+    <mesh
+     name="Curve013"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve013.geometry}
+     material={materials['flutter sky blue']}
+     position={[-1.688, 0.196, -0.438]}
+     scale={[0.96, 0.723, 0.96]}
+    />
+    <mesh
+     name="Curve015"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve015.geometry}
+     material={materials['flutter dark blue']}
+     position={[-1.632, 0.196, -0.14]}
+     scale={[0.96, 0.723, 0.96]}
+    />
+    <mesh
+     name="Curve016"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve016.geometry}
+     material={materials['flutter medium blue']}
+     position={[-1.741, 0.196, -0.25]}
+     scale={[0.96, 0.723, 0.96]}
+    />
+    <mesh
+     name="Curve018"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve018.geometry}
+     material={materials['flutter dark blue']}
+     position={[-1.666, 0.196, -0.205]}
+     scale={[0.96, 0.723, 0.96]}
+    />
+    <mesh
+     name="Curve017"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve017.geometry}
+     material={materials['flutter medium blue.001']}
+     position={[-1.633, -0.261, -0.25]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-0.96, -0.723, -0.96]}
+    />
+    <mesh
+     name="Curve019"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve019.geometry}
+     material={materials['flutter dark blue.001']}
+     position={[-1.742, -0.261, -0.14]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-0.96, -0.723, -0.96]}
+    />
+    <mesh
+     name="Curve020"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve020.geometry}
+     material={materials['flutter sky blue.001']}
+     position={[-1.686, -0.261, -0.438]}
+     rotation={[-Math.PI, 0, 0]}
+     scale={[-0.96, -0.723, -0.96]}
+    />
+    <group
+     name="Curve021"
+     position={[-1.444, -0.226, 1.071]}
+     rotation={[0, 0, 3.14]}
+     scale={[2.094, 3.146, 2.094]}>
+     <mesh
+      name="Curve022_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve022_1.geometry}
+      material={materials['CSS White.001']}
+     />
+     <mesh
+      name="Curve022_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve022_2.geometry}
+      material={materials['CSS color 2.001']}
+     />
+     <mesh
+      name="Curve022_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve022_3.geometry}
+      material={materials['CSS color 1.001']}
+     />
+    </group>
+    <group
+     name="Curve022"
+     position={[0.547, -0.229, -0.648]}
+     rotation={[0, 0, -3.141]}
+     scale={[2.363, 2.74, 2.363]}>
+     <mesh
+      name="Curve028"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve028.geometry}
+      material={materials['Angular red 2.001']}
+     />
+     <mesh
+      name="Curve028_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve028_1.geometry}
+      material={materials['Angular red 1.001']}
+     />
+     <mesh
+      name="Curve028_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve028_2.geometry}
+      material={materials['Angular White.001']}
+     />
+    </group>
+    <group name="Curve023" position={[-1.444, 0.226, 1.071]} scale={[2.094, 2.766, 2.094]}>
+     <mesh
+      name="Curve016_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve016_1.geometry}
+      material={materials['CSS White']}
+     />
+     <mesh
+      name="Curve016_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve016_2.geometry}
+      material={materials['CSS color 2']}
+     />
+     <mesh
+      name="Curve016_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve016_3.geometry}
+      material={materials['CSS color 1']}
+     />
+    </group>
+    <group name="Curve024" position={[0.612, 0.228, -0.626]} scale={[2.363, 2.74, 2.363]}>
+     <mesh
+      name="Curve026_1"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve026_1.geometry}
+      material={materials['Angular red 2']}
+     />
+     <mesh
+      name="Curve026_2"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve026_2.geometry}
+      material={materials['Angular red 1']}
+     />
+     <mesh
+      name="Curve026_3"
+      castShadow
+      receiveShadow
+      geometry={nodes.Curve026_3.geometry}
+      material={materials['Angular White']}
+     />
+    </group>
+    <mesh
+     name="Curve025"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve025.geometry}
+     material={materials.Material}
+     position={[0.421, 0.229, 2.543]}
+     scale={[2.88, 2.548, 2.88]}
+    />
+    <mesh
+     name="Curve026"
+     castShadow
+     receiveShadow
+     geometry={nodes.Curve026.geometry}
+     material={materials['Material.001']}
+     position={[0.282, -0.229, 2.543]}
+     rotation={[0, 0, -3.141]}
+     scale={[2.88, 2.548, 2.88]}
     />
    </group>
   </group>
