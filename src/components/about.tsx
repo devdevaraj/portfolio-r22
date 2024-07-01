@@ -18,7 +18,7 @@ export default function About() {
       <h2 className="absolute m-auto text-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">MY SELF</h2>
      </div>
      <h2 className="text-3xl font-bold">Hi! This is Devaraj.</h2>
-     <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+     <p className="text-xl text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
      <a href="#" className="text-blue-700">Checkout my resume</a>
      <div className="flex gap-5">
       <LightCanvas

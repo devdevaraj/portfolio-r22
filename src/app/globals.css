@@ -55,5 +55,5 @@ body {
 }
 
 .aos-animate {
-  @apply translate-x-0 sm:translate-x-0 md:translate-x-0 lg:translate-x-0 xl:translate-x-0 2xl:translate-x-0 translate-y-0 sm:translate-y-0 md:translate-y-0 lg:translate-y-0 xl:translate-y-0 2xl:translate-y-0 opacity-100;
+  @apply translate-x-0 sm:translate-x-0 md:translate-x-0 lg:translate-x-0 xl:translate-x-0 2xl:translate-x-0 translate-y-0 sm:translate-y-0 md:translate-y-0 lg:translate-y-0 xl:translate-y-0 2xl:translate-y-0 rotate-0 opacity-100;
 }
