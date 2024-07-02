@@ -1,4 +1,8 @@
 export default function MainFocus() {
+ let mainFocus = [
+  { name: "MERN Stack", translate: "-translate-x-full", rotate: "rotate-45" },
+  { name: "Flutter", translate: "translate-x-full", rotate: "-rotate-45" },
+ ];
  return (
   <main className="w-svw flex flex-col items-center justify-start overflow-x-hidden">
    <header className="text-4xl text-shadow-sm font-bold text-white">
@@ -14,8 +18,11 @@ export default function MainFocus() {
     <h2 className="translate-x-96 opacity-0 reveals inline-block">S</h2>
    </header>
    <section className="text-white w-full flex flex-col lg:flex-row p-10 gap-10 overflow-hidden">
-    <aside className="aspect-video flex-1 bg-yellow-600 -translate-x-full rotate-45 reveals p-2">MERN Stack</aside>
-    <aside className="aspect-video flex-1 bg-yellow-600 translate-x-full -rotate-45 reveals p-2">Flutter</aside>
+    {mainFocus.map(e => (
+     <aside className={`aspect-video flex-1 shadow-sm shadow-white rounded-lg ${e.translate} ${e.rotate} reveals p-2`}>
+      <h2 className="text-2xl font-bold text-center">{e.name}</h2>
+     </aside>
+    ))}
    </section>
   </main>
  );
