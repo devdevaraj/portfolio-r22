@@ -18,8 +18,8 @@ export default function MainFocus() {
     <h2 className="translate-x-96 opacity-0 reveals inline-block">S</h2>
    </header>
    <section className="text-white w-full flex flex-col lg:flex-row p-10 gap-10 overflow-hidden">
-    {mainFocus.map(e => (
-     <aside className={`aspect-video flex-1 shadow-sm shadow-white rounded-lg ${e.translate} ${e.rotate} reveals p-2`}>
+    {mainFocus.map((e, i) => (
+     <aside key={i} className={`aspect-video flex-1 shadow-sm shadow-white rounded-lg ${e.translate} ${e.rotate} reveals p-2`}>
       <h2 className="text-2xl font-bold text-center">{e.name}</h2>
      </aside>
     ))}
