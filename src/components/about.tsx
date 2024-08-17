@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LightCanvas from "./common/light-canvas";
 import GithubIcon from "./3d-loaders/github-icon";
 import LinkedinIcon from "./3d-loaders/linkedin-icon";
@@ -8,7 +9,9 @@ export default function About() {
   <section className="h-svh w-svw flex p-5 pt-20 flex-row flex-wrap overflow-x-hidden" id="about">
    <aside className="text-white flex-grow basis-[512px]">
     <div className="h-full w-full flex items-center justify-center lg:p-40">
-     <div className="h-full aspect-[3/4] bg-white reveals -translate-x-40 opacity-0"></div>
+     <div className="h-full aspect-[3/4] bg-white reveals -translate-x-40 opacity-0">
+     <Image src={"/me/profile.jpg"} alt="profile" fill={true} className="object-cover"/>
+     </div>
     </div>
    </aside>
    <article className="text-white flex-grow basis-[512px]">
