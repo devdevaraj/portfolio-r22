@@ -25,9 +25,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <GlobalContext>
           {/* <Cursor /> */}
           <StarsCanvas />
-          <Scrollbar />
+          {/* <Scrollbar />
           <NavBar />
-          <NavMenu />
+          <NavMenu /> */}
           {children}
         </GlobalContext>
       </body>

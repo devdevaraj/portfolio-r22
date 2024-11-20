@@ -10,12 +10,14 @@ import Skills from "@r22/components/skills";
 import Contact from "@r22/components/contact";
 import Footer from "@r22/components/footer";
 import useTransition from "@r22/lib/aos";
+import ComingSoon from "@r22/components/coming-soon";
 
 export default function Home() {
   useTransition();
   return (
     <main className="min-h-svh w-full overflow-x-hiddens" id="page">
-      <Welcome />
+      <ComingSoon/>
+      {/* <Welcome />
       <About />
       <MainFocus />
       <Technologies />
@@ -23,7 +25,7 @@ export default function Home() {
       <Skills />
       <Portfolio />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }
