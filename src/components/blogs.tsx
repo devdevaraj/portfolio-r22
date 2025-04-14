@@ -1,9 +1,10 @@
 "use client"
-// import { _skills } from "@r22/data/skills";
-import _skills from "@r22/data/skills.json";
-import Image from "next/image";
 
-export default function Skills() {
+import _blogs from "@r22/data/blogs.json";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Blogs() {
   const breakpoints: { [key: string]: number } = {
     es: 2,
     sm: 3,
@@ -24,14 +25,14 @@ export default function Skills() {
   })
 
   return (
-    <section className="min-h-svh min-w-svh flex flex-col items-center justify-start p-1 sm:p-5 overflow-x-hidden">
+    <section className="max-w-screen-2xl m-auto min-h-svh min-w-svh flex flex-col items-center justify-start p-1 sm:p-5 overflow-x-hidden">
       <header className="text-4xl text-shadow-sm font-bold text-white">
-        <h1>SKILLS</h1>
+        <h1>BLOGS</h1>
       </header>
       <section className="flex-grow w-full pt-2">
         <aside className="w-1/2 sm:w-2/3 md:w-3/4 lg:w-4/5 xl:w-5/6 m-auto translate-y-1 border-2 border-slate-500"></aside>
         <section className="w-full h-full grid grid-rows-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 overflow-hidden">
-          {_skills.map((item, index) => (
+          {_blogs.map((item, index) => (
             <article
               key={index}
               className={`aspect-portrait px-4 items-center flex flex-col reveals translate-y-full opacity-0 ${getVisible(index).join(" ")} ${getDelay(index).join(" ")}`}>
@@ -57,7 +58,11 @@ export default function Skills() {
           ))}
         </section>
         <aside className="w-1/2 sm:w-2/3 md:w-3/4 lg:w-4/5 xl:w-5/6 m-auto -translate-y-1 border-2 border-slate-500"></aside>
-        <aside className="text-center text-white cursor-pointer">Wnna see more?</aside>
+        <aside className="text-center text-white cursor-pointer">
+          <Link href={"/blogs"}>
+            Wnna see more?
+          </Link>
+        </aside>
       </section>
     </section>
   );

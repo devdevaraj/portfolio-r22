@@ -18,7 +18,6 @@ const _cubes = [
 ];
 
 export default function TimelineScene({innerRef}: {innerRef: Ref<Group>}) {
-  const ref = useRef<Group>(null);
  const { pointer, camera } = useThree();
  useFrame((state, delta) => {
   const x = pointer.x / window.innerWidth;
@@ -36,7 +35,6 @@ export default function TimelineScene({innerRef}: {innerRef: Ref<Group>}) {
      scale={item.scale}
      position={new Vector3(...item.pos)} />
    ))}
-
   </group>
  );
 }

@@ -4,7 +4,7 @@ export default function MainFocus() {
   { name: "Flutter", translate: "translate-x-full", rotate: "-rotate-45" },
  ];
  return (
-  <main className="w-svw flex flex-col items-center justify-start overflow-x-hidden">
+  <main className="max-w-screen-2xl m-auto w-full flex flex-col items-center justify-start overflow-x-hidden">
    <header className="text-4xl text-shadow-sm font-bold text-white">
     <h2 className="translate-x-10 opacity-0 reveals inline-block">M</h2>
     <h2 className="translate-x-20 opacity-0 reveals inline-block">A</h2>

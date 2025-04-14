@@ -15,19 +15,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Devaraj | Portfolio",
-  description: "Software Engineer who know how to plan, design and develop!",
+  description: "Software engineer who know how to plan, design and develop!",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={cn("bg-[#030014] overflow-y-auto overflow-x-hidden", inter.className)}>
+      {/* <body className={cn("bg-[#030014] overflow-y-auto overflow-x-hidden", inter.className)}> */}
+      <body className={cn("bg-[#030014]", inter.className)}>
         <GlobalContext>
           {/* <Cursor /> */}
           <StarsCanvas />
-          {/* <Scrollbar />
+
+          <Scrollbar />
           <NavBar />
-          <NavMenu /> */}
+          <NavMenu />
+
           {children}
         </GlobalContext>
       </body>

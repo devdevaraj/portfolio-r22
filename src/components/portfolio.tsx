@@ -4,26 +4,27 @@ import { Tilt } from "react-tilt";
 import _projects from "@r22/data/projects.json";
 import NoSsr from "@r22/providers/no-ssr";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Portfolio() {
 
- const breakpoints: { [key: string]: number} = {
+ const breakpoints: { [key: string]: number } = {
   es: 1,
   sm: 2,
   md: 3,
   lg: 4,
  }
 
- const getVisible = (int: number) => Object.entries(breakpoints).map((i,j) => {
+ const getVisible = (int: number) => Object.entries(breakpoints).map((i, j) => {
   let bp = i[0];
   let value = breakpoints[bp];
-  return `${bp == "es" ? "" : bp+":"}${(int >= value*3) ? "hidden" : "flex"}`;
+  return `${bp == "es" ? "" : bp + ":"}${(int >= value * 3) ? "hidden" : "flex"}`;
  }).filter(i => i.split(":")[1] !== "");
 
  const getPosition = (i: number) => `${(i % 4 === 0 || i % 4 === 1) ? "-" : ""}translate-x-40`;
  const getRandomDelay = () => Math.floor(Math.random() * 5) * 200;
  return (
-  <main className="min-h-svh w-svw p-5 sm:p-9 flex flex-col items-center justify-start gap-5 sm:gap-10 overflow-x-hidden">
+  <main className="max-w-screen-2xl m-auto min-h-svh w-full p-5 sm:p-9 flex flex-col items-center justify-start gap-5 sm:gap-10 overflow-x-hidden">
    <header className="text-4xl text-shadow-sm font-bold text-white">
     <h2 className="translate-y-40 opacity-0 reveals">
      WHAT HAVE I DONE SO FAR
@@ -50,7 +51,9 @@ export default function Portfolio() {
      ))}
     </NoSsr>
    </section>
-   <section className="text-center text-white cursor-pointer">Explore more</section>
+   <section className="text-center text-white cursor-pointer">
+    <Link href={"/projects"} >Explore more</Link>
+   </section>
   </main>
  );
 }

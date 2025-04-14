@@ -10,9 +10,12 @@ export default function Scrollbar() {
 
  useEffect(() => {
   const scrollHandler = (e: Event) => {
-   let _scrollTop = (e.target as HTMLDivElement).scrollTop;
-   let _scrollHeight = (e.target as HTMLDivElement).scrollHeight;
-   let _clientHeight = (e.target as HTMLDivElement).clientHeight;
+   // let _scrollTop = (e.target as HTMLDivElement).scrollTop;
+   const _scrollTop = window.scrollY ?? document.documentElement.scrollTop;
+   // let _scrollHeight = (e.target as HTMLDivElement).scrollHeight;
+   const _scrollHeight = document.documentElement.scrollHeight;
+   // let _clientHeight = (e.target as HTMLDivElement).clientHeight;
+   const _clientHeight = document.documentElement.clientHeight;
    let scroll = _scrollTop / (_scrollHeight - _clientHeight);
    (scrollbarRef.current! as HTMLDivElement).style.width = String(scroll * 100) + "%";
 
@@ -20,9 +23,11 @@ export default function Scrollbar() {
    clientHeight.value = _clientHeight;
   }
 
-  const body = document.querySelector("body")!
-  body.addEventListener("scroll", scrollHandler);
-  return () =>  body.removeEventListener("scroll", scrollHandler);
+  // const body = document.querySelector("body")!
+  // body.addEventListener("scroll", scrollHandler);
+  window.addEventListener("scroll", scrollHandler);
+  // return () =>  body.removeEventListener("scroll", scrollHandler);
+  return () =>  window.removeEventListener("scroll", scrollHandler);
  });
 
  return (

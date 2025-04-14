@@ -24,12 +24,12 @@
 }
 
 html {
-  @apply scroll-smooth overflow-hidden;
+  /* @apply scroll-smooth overflow-hidden; */
   cursor: url("/loading-circle.svg"), auto !important;
 }
 html,
 body {
-  @apply h-full w-full overflow-x-hidden;
+  /* @apply h-full w-full overflow-x-hidden; */
 }
 * {
   @apply box-border m-0 p-0;

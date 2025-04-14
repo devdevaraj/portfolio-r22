@@ -6,7 +6,7 @@ import IntroModel from "./3d-loaders/intro-model";
 
 export default function Welcome() {
  return (
-  <section className="h-svh w-svw flex p-5 lg:flex-row flex-col">
+  <section className="max-w-screen-2xl m-auto h-svh w-full flex p-5 lg:flex-row flex-col">
    <section className="lg:w-1/2 w-full lg:h-full h-2/3">
     <div className="h-full w-full sm:p-10 xl:p-20 flex items-center justify-center">
      <LightCanvas

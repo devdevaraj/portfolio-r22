@@ -17,7 +17,8 @@ function useTransition() {
         }
       });
     }
-    document.querySelector("body")?.addEventListener("scroll", reveal);
+    // document.querySelector("body")?.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", reveal);
   });
 }
 

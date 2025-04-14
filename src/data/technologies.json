@@ -55,9 +55,9 @@
   { "image": "zod.svg", "site": "" },
   { "image": "socketio.svg", "site": "" },
   { "image": "webrtc.svg", "site": "" },
-  { "image": "", "site": "" },
-  { "image": "", "site": "" },
-  { "image": "", "site": "" },
-  { "image": "", "site": "" },
-  { "image": "", "site": "" }
+  { "image": "rest-api.svg", "site": "" },
+  { "image": "grpc.svg", "site": "" },
+  { "image": "jira.svg", "site": "" },
+  { "image": "go.svg", "site": "" },
+  { "image": "rxjs.svg", "site": "" }
 ]
