@@ -1,7 +1,17 @@
 export default function MainFocus() {
  let mainFocus = [
-  { name: "MERN Stack", translate: "-translate-x-full", rotate: "rotate-45" },
-  { name: "Flutter", translate: "translate-x-full", rotate: "-rotate-45" },
+  {
+   name: "Application Development",
+   des: ["React, Next.js", "Node.js, Express", "REST APIs, WebSockets", "UI/UX, State Management", "Electron", "Flutter (mobile)"],
+   translate: "-translate-x-full",
+   rotate: "rotate-45"
+  },
+  {
+   name: "Systems & Infrastructure",
+   des: ["Docker, Firecracker (microVMs)", "Linux, Networking", "ZFS, Storage systems", "Redis, MongoDB, PostgreSQL", "CI / CD, Deployment", "Nginx"],
+   translate: "translate-x-full",
+   rotate: "-rotate-45"
+  },
  ];
  return (
   <main className="max-w-screen-2xl m-auto w-full flex flex-col items-center justify-start overflow-x-hidden">
@@ -19,8 +29,13 @@ export default function MainFocus() {
    </header>
    <section className="text-white w-full flex flex-col lg:flex-row p-10 gap-10 overflow-hidden">
     {mainFocus.map((e, i) => (
-     <aside key={i} className={`aspect-video flex-1 shadow-sm shadow-white rounded-lg ${e.translate} ${e.rotate} reveals p-2`}>
-      <h2 className="text-2xl font-bold text-center">{e.name}</h2>
+     <aside key={i} className={`aspect-video flex-1 shadow-sm shadow-white rounded-lg ${e.translate} ${e.rotate} reveals p-8`}>
+      <h2 className="text-2xl font-bold text-center mb-3">{e.name}</h2>
+      <ol className="text-xl">
+       {e.des?.length ? e.des.map((d, j) => (
+        <li key={j} className="text-center mb-1">{d}</li>
+       )) : null}
+      </ol>
      </aside>
     ))}
    </section>

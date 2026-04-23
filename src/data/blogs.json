@@ -1,6 +1,36 @@
 [
-  { "name": "Web application development (MERN , MEAN etc)", "image": "web-development.png" },
-  { "name": "Android/OIS application development using Flutter", "image": "web-development.png" },
+  {
+    "name": "My Evolution: From Full Stack to Platform Builder",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Building a Web-Based Linux Terminal with MicroVMs",
+    "image": "web-development.png"
+  },
+  {
+    "name": "The Hybrid Engineer: Combining UI, Infrastructure & Teaching",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Exploring Container Networks and Subnet Isolation",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Architecting Multi-Role Systems (LMS)",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Advanced Computing: GPU Clusters & AI Datacenters",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Web application development (MERN , MEAN etc)",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Android/OIS application development using Flutter",
+    "image": "web-development.png"
+  },
   {
     "name": "Web site development using (Python Django, PHP, etc.)",
     "image": "web-development.png"
@@ -9,21 +39,60 @@
     "name": "Software testing using selenium (Selenium / Cypress)",
     "image": "web-development.png"
   },
-  { "name": "Native Desktop application development using C++", "image": "web-development.png" },
-  { "name": "Source control (git / Helix core)", "image": "web-development.png" },
-  { "name": "DevOps ", "image": "web-development.png" },
-  { "name": "Cloud computing", "image": "web-development.png" },
-  { "name": "Basic networking", "image": "web-development.png" },
-  { "name": "3D modeling Using (Blender / Maya 3D)", "image": "web-development.png" },
-  { "name": "Game development (Unreal engine / Unity)", "image": "web-development.png" },
-  { "name": "Cyber security", "image": "web-development.png" },
+  {
+    "name": "Native Desktop application development using C++",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Source control (git / Helix core)",
+    "image": "web-development.png"
+  },
+  {
+    "name": "DevOps ",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Cloud computing",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Basic networking",
+    "image": "web-development.png"
+  },
+  {
+    "name": "3D modeling Using (Blender / Maya 3D)",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Game development (Unreal engine / Unity)",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Cyber security",
+    "image": "web-development.png"
+  },
   {
     "name": "Cryptography, Bloack chainain and Web3  (Hyper ledger)",
     "image": "web-development.png"
   },
-  { "name": "Linux and terminal automation", "image": "web-development.png" },
-  { "name": "Electronics and Computer Hardware", "image": "web-development.png" },
-  { "name": "Data structures, Algorithms and optimisation", "image": "web-development.png" },
-  { "name": "Internet of things", "image": "web-development.png" },
-  { "name": "Never Stop Learning", "image": "web-development.png" }
+  {
+    "name": "Linux and terminal automation",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Electronics and Computer Hardware",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Data structures, Algorithms and optimisation",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Internet of things",
+    "image": "web-development.png"
+  },
+  {
+    "name": "Never Stop Learning",
+    "image": "web-development.png"
+  }
 ]

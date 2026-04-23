@@ -36,7 +36,7 @@ export default function Blogs() {
             <article
               key={index}
               className={`aspect-portrait px-4 items-center flex flex-col reveals translate-y-full opacity-0 ${getVisible(index).join(" ")} ${getDelay(index).join(" ")}`}>
-              <article className="h-5 w-1 border-2 border-slate-500"></article>
+              <article className="h-5 w-0 border-2 border-slate-500"></article>
               <article className="flex-1 w-full border-4 border-slate-500 rounded-sm relative">
                 <article className="bg-slate-700 absolute -z-10 opacity-50 h-full w-full"></article>
                 <aside className="text-white h-full w-full flex flex-col items-center justify-start">
@@ -53,7 +53,7 @@ export default function Blogs() {
                   </button>
                 </aside>
               </article>
-              <article className="h-5 w-1 border-2 border-slate-500"></article>
+              <article className="h-5 w-0 border-2 border-slate-500"></article>
             </article>
           ))}
         </section>
