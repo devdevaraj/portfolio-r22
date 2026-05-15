@@ -1,64 +1,114 @@
 [
   {
-    "name": "Tic Tac Toe",
-    "assets_path": "/projects/tic-tac-toe",
+    "name": "Smart Space",
+    "page": "smart-space",
+    "assets_path": "/projects/smart-space",
     "thumbnail": "thumbnail.png",
-    "images": ["image1.png", "image2.png"],
-    "tnt": ["HTML", "CSS", "JavaScript"],
-    "descriptions": ""
+    "images": [
+      "image1.png",
+      "image2.png",
+      "image3.png"
+    ],
+    "tnt": [
+      "React",
+      "ExpressJS",
+      "NodeJS",
+      "MongoDB",
+      "Docker",
+      "Firecracker",
+      "Golang",
+      "Envoy",
+      "Redis"
+    ],
+    "descriptions": "I built a Smart Space platform that combines microVM-based isolation, Docker-powered container orchestration, Golang backend services, and a MERN stack frontend to create a highly scalable and secure cloud environment. The system is designed to dynamically provision isolated Linux workspaces and application environments on demand, enabling users to access web-based terminals, development sandboxes, and interactive services directly from the browser. By integrating lightweight microVM technologies with containerized workloads, the platform achieves both strong security boundaries and efficient resource utilization. The Golang backend handles high-performance orchestration, networking, and session management, while the MERN stack provides a responsive and modern user interface for real-time interaction, monitoring, and management. The architecture focuses on scalability, automation, multi-user support, and infrastructure-level isolation, making it suitable for educational platforms, cloud labs, remote development environments, and advanced computing applications.",
+    "url": "https://lab.labsy.in",
+    "source_url": ""
   },
   {
-    "name": "Hotstar clone",
-    "assets_path": "",
+    "name": "Titha",
+    "page": "tritha",
+    "assets_path": "/projects/tritha",
     "thumbnail": "thumbnail.png",
-    "images": [],
-    "tnt": [],
-    "descriptions": ""
+    "images": [
+      "image1.png",
+      "image2.png",
+      "image3.png"
+    ],
+    "tnt": [
+      "NextJS",
+      "Typescript",
+      "ExpressJS",
+      "MongoDB",
+      "NodeJS",
+      "REST API"
+    ],
+    "descriptions": "Next.js, Express.js, Node.js, and MongoDB were used to build Tritha, a modern temple management suite designed to simplify and digitize temple administration and daily operations. The platform provides an integrated system for managing devotees, donations, bookings, events, rituals, staff activities, and financial records through a centralized and user-friendly interface. Built with a scalable full-stack architecture, Tritha focuses on performance, reliability, and seamless user experience across both desktop and mobile devices. The system enables efficient data management, real-time updates, secure access control, and streamlined workflows for temple authorities and administrators. By combining a responsive frontend with a robust backend and flexible database architecture, Tritha delivers a scalable solution for modern temple management and digital transformation.",
+    "url": "https://panel.tritha.cloud",
+    "source_url": ""
   },
   {
-    "name": "Attendance management system",
-    "assets_path": "",
+    "name": "Savedate",
+    "page": "save-date",
+    "assets_path": "/projects/save-date",
     "thumbnail": "thumbnail.png",
-    "images": [],
-    "tnt": [],
-    "descriptions": ""
+    "images": [
+      "image1.png",
+      "image2.png",
+      "image3.png"
+    ],
+    "tnt": [
+      "NextJS",
+      "Typescript",
+      "ExpressJS",
+      "MongoDB",
+      "NodeJS",
+      "REST API"
+    ],
+    "descriptions": "SaveDate.me is a full-stack digital invitation platform developed using Next.js, Express.js, Node.js, and MongoDB to modernize the way events are shared and managed online. The platform enables users to create visually engaging invitation pages with custom themes, event details, countdowns, image galleries, RSVP functionality, and guest communication features. Designed with a strong focus on responsiveness and user experience, the system delivers smooth performance across mobile and desktop devices while supporting dynamic content generation and real-time interactions. The backend architecture ensures scalable event handling, secure data management, and efficient API communication, making SaveDate.me a reliable solution for hosting and managing digital invitations for weddings, celebrations, and professional events.",
+    "url": "https://savedate.me",
+    "source_url": ""
   },
   {
-    "name": "Calculator",
-    "assets_path": "",
-    "thumbnail": "thumbnail.png",
+    "name": "Mongo Bash",
+    "page": "#",
+    "assets_path": "/skills",
+    "thumbnail": "web-development.png",
     "images": [],
     "tnt": [],
     "descriptions": ""
   },
   {
     "name": "Take notes",
-    "assets_path": "",
-    "thumbnail": "thumbnail.png",
+    "page": "#",
+    "assets_path": "/skills",
+    "thumbnail": "web-development.png",
     "images": [],
     "tnt": [],
     "descriptions": ""
   },
   {
-    "name": "Youtube clone",
-    "assets_path": "",
-    "thumbnail": "thumbnail.png",
+    "name": "GoChess",
+    "page": "#",
+    "assets_path": "/skills",
+    "thumbnail": "web-development.png",
     "images": [],
     "tnt": [],
     "descriptions": ""
   },
   {
-    "name": "Spotify clone",
-    "assets_path": "",
-    "thumbnail": "thumbnail.png",
+    "name": "File share",
+    "page": "#",
+    "assets_path": "/skills",
+    "thumbnail": "web-development.png",
     "images": [],
     "tnt": [],
     "descriptions": ""
   },
   {
-    "name": "E-commersce application",
-    "assets_path": "",
-    "thumbnail": "thumbnail.png",
+    "name": "posly",
+    "page": "#",
+    "assets_path": "/skills",
+    "thumbnail": "web-development.png",
     "images": [],
     "tnt": [],
     "descriptions": ""

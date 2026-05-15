@@ -35,17 +35,30 @@ export default function Portfolio() {
      {_projects.map((project, index) => (
       <article
        key={index}
-       className={`flex-1 basis-80 aspect-portrait rounded-xl ${getPosition(index)} ${getVisible(index).join(" ")} delay-[${getRandomDelay()}ms] opacity-0 reveals`}>
+       className={`flex-1 basis-80 aspect-portrait rounded-2xl ${getPosition(index)} ${getVisible(index).join(" ")} delay-[${getRandomDelay()}ms] opacity-0 reveals`}>
        <Tilt
         options={{
-         max: 45,
-         scale: 1,
-         speed: 450
+         max: 15,
+         scale: 1.02,
+         speed: 400
         }}
-        className="h-full w-full relative">
-        <aside className="absolute bg-slate-600 h-full w-full -z-40 overflow-hidden rounded-xl opacity-30"></aside>
-        <h1 className="font-bold text-2xl text-center text-white p-5">{project.name}</h1>
-        <Image src={"/projects/tic-tac-toe/image1.png"} height={200} width={300} alt="Project thumbnail" />
+        className="h-full w-full relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.5)] group cursor-pointer transition-all duration-300">
+        <div className="relative w-full h-[55%] overflow-hidden">
+         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent z-10 transition-opacity duration-500 group-hover:opacity-70"></div>
+         <Image
+          src={`${project.assets_path}/${project.thumbnail}`}
+          fill
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          alt="Project thumbnail"
+         />
+        </div>
+        <div className="relative w-full h-[45%] p-6 flex flex-col justify-end bg-gradient-to-b from-slate-900/80 to-slate-900 z-20">
+         <div className="w-10 h-1 bg-gradient-to-r from-cyan-400 to-indigo-500 mb-4 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)] group-hover:w-16 transition-all duration-500"></div>
+         <h1 className="font-bold text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 drop-shadow-sm mb-2">{project.name}</h1>
+         <Link href={`/projects/${project.page}`} className="text-xs font-semibold tracking-widest text-cyan-400/80 uppercase group-hover:text-cyan-300 hover:text-cyan-200 transition-colors mt-auto inline-block">
+          Explore Project ↗
+         </Link>
+        </div>
        </Tilt>
       </article>
      ))}

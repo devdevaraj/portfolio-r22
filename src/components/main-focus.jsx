@@ -29,13 +29,18 @@ export default function MainFocus() {
    </header>
    <section className="text-white w-full flex flex-col lg:flex-row p-10 gap-10 overflow-hidden">
     {mainFocus.map((e, i) => (
-     <aside key={i} className={`aspect-video flex-1 shadow-sm shadow-white rounded-lg ${e.translate} ${e.rotate} reveals p-8`}>
-      <h2 className="text-2xl font-bold text-center mb-3">{e.name}</h2>
-      <ol className="text-xl">
-       {e.des?.length ? e.des.map((d, j) => (
-        <li key={j} className="text-center mb-1">{d}</li>
-       )) : null}
-      </ol>
+     <aside key={i} className={`aspect-video flex flex-col justify-center flex-1 ${e.translate} ${e.rotate} reveals p-8 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 border-t-white/20 border-l-white/20 shadow-[10px_10px_30px_rgba(0,0,0,0.5),inset_1px_1px_0px_rgba(255,255,255,0.2)]`}>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">{e.name}</h2>
+      <div className="flex w-full justify-center">
+       <ul className="text-lg md:text-xl flex flex-col gap-3 text-left text-slate-200 list-none pl-0">
+        {e.des?.length ? e.des.map((d, j) => (
+         <li key={j} className="font-medium tracking-wide drop-shadow-sm flex items-center gap-4">
+          <span className="min-w-2 min-h-2 w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,1)]"></span>
+          <span>{d}</span>
+         </li>
+        )) : null}
+       </ul>
+      </div>
      </aside>
     ))}
    </section>

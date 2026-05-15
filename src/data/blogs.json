@@ -1,98 +1,136 @@
 [
   {
-    "name": "My Evolution: From Full Stack to Platform Builder",
-    "image": "web-development.png"
+    "name": "My Evolution: From Full Stack developer to Platform Builder",
+    "page": "my-evolution-from-a-full-stack-developer-to-platform-builder",
+    "image": "b1.jpeg",
+    "sub": "How building applications taught me to build ecosystems, infrastructure, and scalable digital experiences.",
+    "content": "When I first started my journey as a full stack developer, my world revolved around creating applications. I focused on building responsive frontends, developing APIs, managing databases, and deploying complete web solutions. Every project was an opportunity to sharpen my technical skills and understand how software products come together. From crafting clean UI components in React to designing scalable backend services with Node.js, I enjoyed the process of turning ideas into functional applications.\n\nOver time, however, I began to realize that building applications was only one part of a much larger ecosystem. As projects became more complex, I found myself increasingly interested in the infrastructure behind the software. Questions started to shift from “How do I build this feature?” to “How do I build systems that can support hundreds of features, developers, and users efficiently?” This curiosity pushed me deeper into areas such as system architecture, networking, containerization, cloud environments, automation, and distributed systems.\n\nMy transition from a full stack developer to a platform builder happened gradually through experimentation and exploration. I started working with Docker-based environments, isolated networking systems, scalable deployment pipelines, and microVM technologies. Instead of simply creating applications, I became fascinated by building the foundations that applications run on. I wanted to design platforms that developers could use to deploy, test, scale, and manage software seamlessly. The challenge evolved from solving user problems to solving developer and infrastructure problems at scale.\n\nToday, my perspective on software development is very different from when I began. I no longer see applications as isolated products; I see them as parts of larger platforms and ecosystems. Building a platform requires thinking about scalability, reliability, automation, security, and developer experience all at once. It is a shift from writing code for a single application to designing environments where multiple applications can thrive efficiently.\n\nThis evolution has also changed the way I approach learning. I continuously explore areas beyond traditional web development, including virtualization, container orchestration, networking, and cloud-native technologies. The deeper I go, the more I realize that platform building is not just about infrastructure — it is about empowering developers, improving workflows, and creating systems that can adapt and evolve over time.\n\nLooking back, becoming a full stack developer gave me the foundation to understand software end-to-end. Becoming a platform builder expanded that vision into something much larger. It transformed my mindset from simply delivering features to engineering scalable digital ecosystems. And honestly, this journey still feels like it is only getting started."
   },
   {
     "name": "Building a Web-Based Linux Terminal with MicroVMs",
-    "image": "web-development.png"
+    "page": "building-a-web-based-linux-terminal-with-microvms",
+    "image": "b2.jpeg",
+    "sub": "Exploring lightweight virtualization, secure isolation, and scalable infrastructure for browser-based Linux environments.",
+    "content": "The idea of running a fully functional Linux terminal directly inside a web browser has always fascinated me. Traditional container-based solutions can provide lightweight environments, but I wanted to explore something that offered stronger isolation, better security, and a more scalable architecture. This curiosity led me into the world of MicroVMs — lightweight virtual machines designed to combine the speed of containers with the security boundaries of traditional virtualization.\n\nMy journey started with understanding the limitations of standard container environments. Containers are fast and efficient, but they still share the host kernel, which introduces certain security and isolation concerns in multi-user systems. When building a platform where users can launch independent Linux environments on demand, isolation becomes a critical requirement. That is where technologies like Firecracker and Kata Containers caught my attention. They offered a modern approach to virtualization that was lightweight enough for rapid scaling while still maintaining strong isolation between workloads.\n\nAs I continued experimenting, the project evolved from a simple terminal emulator into a larger infrastructure challenge. The goal was no longer just to display a shell in the browser — it became about designing a complete platform capable of provisioning isolated Linux environments dynamically. This involved managing MicroVM lifecycle creation, networking, filesystem isolation, WebSocket-based communication, and resource allocation. I also explored ways to create independent virtual networks for each environment to improve security and reduce cross-instance interference.\n\nOne of the most interesting parts of this journey was balancing performance with isolation. Traditional virtual machines can be resource-heavy and slow to boot, while containers are extremely fast but offer weaker separation. MicroVMs sit in a unique middle ground. They provide near-container startup speeds while maintaining VM-level isolation, making them highly suitable for cloud-native platforms, sandboxed environments, and browser-accessible development systems.\n\nBuilding a web-based Linux terminal also changed the way I think about developer infrastructure. Instead of treating development environments as static systems, I started viewing them as disposable, dynamically generated workspaces that can be created and destroyed instantly. This opens up possibilities for online coding platforms, secure sandboxing systems, educational environments, and cloud development tools that scale efficiently without compromising security.\n\nThe deeper I explored MicroVM technologies, the more I realized that this project was not just about terminals or virtualization. It became an exploration of modern infrastructure design, developer experience, and scalable system architecture. It represents the intersection of web development, backend engineering, networking, and virtualization — a space where software engineering evolves beyond applications into platform engineering itself."
   },
   {
     "name": "The Hybrid Engineer: Combining UI, Infrastructure & Teaching",
-    "image": "web-development.png"
+    "page": "the-hybrid-engineer-combining-ui-infrastructure-teaching",
+    "image": "b3.jpeg",
+    "sub": "Bridging creativity, system design, and knowledge sharing through modern software engineering.",
+    "content": "Software engineering is often divided into specialized roles — frontend developers focus on user interfaces, backend developers handle systems and APIs, while infrastructure engineers manage scalability and deployment. But over time, I realized that my journey did not fit neatly into a single category. I found myself equally passionate about designing user experiences, building scalable infrastructure, and teaching others how technology works. This combination gradually shaped my identity as what I call a hybrid engineer.\n\nMy foundation started with full stack development, where I learned to work across both frontend and backend technologies. I enjoyed creating responsive interfaces, building APIs, and solving real-world problems through software. But as projects became more ambitious, my interests naturally expanded beyond application development. I became increasingly curious about how systems scale, how infrastructure is designed, and how platforms can support large numbers of users and developers efficiently. This curiosity led me deeper into areas like networking, virtualization, cloud-native systems, and platform engineering.\n\nAt the same time, teaching became an important part of my professional growth. Explaining concepts to students and junior developers forced me to think differently about technology. Teaching is not just about sharing information — it is about simplifying complexity without losing depth. Whether it was JavaScript fundamentals, React architecture, Flutter development, or system design concepts, every teaching experience strengthened my own understanding while improving my communication and problem-solving skills.\n\nWhat makes the combination of UI, infrastructure, and teaching powerful is the perspective it creates. Working on frontend systems helps me understand user experience and usability. Infrastructure engineering teaches scalability, reliability, and system thinking. Teaching develops clarity, patience, and the ability to break down complex ideas into understandable concepts. Together, these disciplines create a more complete approach to software engineering — one that balances technical depth with practical usability and knowledge sharing.\n\nThis hybrid mindset has also changed the way I approach projects. I no longer think only about how to build features, but also about how developers will maintain them, how systems will scale under load, and how easily others can understand the architecture. Whether I am designing a 3D web interface, experimenting with MicroVM-based platforms, or preparing training materials for students, the goal remains the same: building technology that is both powerful and accessible.\n\nLooking ahead, I believe the future belongs to engineers who can connect multiple disciplines rather than remain confined to a single specialization. Modern technology ecosystems are increasingly interconnected, and the ability to combine development, infrastructure, and education creates opportunities to build not only better software, but better developer experiences as well. Being a hybrid engineer is not about doing everything — it is about understanding how different layers of technology work together to create meaningful and scalable solutions."
   },
   {
     "name": "Exploring Container Networks and Subnet Isolation",
-    "image": "web-development.png"
+    "page": "exploring-container-networks-and-subnet-isolation",
+    "image": "b4.jpeg",
+    "sub": "Understanding how isolated networking architectures improve scalability, security, and infrastructure management.",
+    "content": "As I started working on larger infrastructure-focused projects, I realized that containers are only one part of modern system design. The real complexity often lies in networking — how services communicate, how workloads remain isolated, and how systems scale securely. This curiosity led me into exploring container networking and subnet isolation, an area that plays a critical role in cloud-native infrastructure and platform engineering.\n\nAt first, my understanding of container networking was fairly simple. Containers could communicate with each other through shared Docker bridge networks, making it easy to build connected services quickly. But as projects evolved into multi-user and dynamically provisioned systems, I discovered the limitations of using shared network environments. When many independent workloads run on the same infrastructure, proper network isolation becomes essential for both security and stability.\n\nThis is where subnet isolation became an important concept in my experimentation. Instead of attaching all containers to a single shared bridge network, I began exploring architectures where each environment or workload receives its own isolated Docker bridge with a unique subnet. This approach creates stronger boundaries between workloads and reduces the risk of interference or accidental cross-communication. It also provides greater control over traffic management, routing, and resource organization.\n\nOne of the most interesting challenges was designing these isolated networks dynamically. Creating networks on demand meant handling subnet allocation carefully to avoid overlaps while maintaining scalability. Each isolated environment required its own dedicated networking layer, IP management strategy, and cleanup process after termination. What initially seemed like a simple networking setup gradually became an exercise in infrastructure orchestration and automated resource management.\n\nBeyond security, subnet isolation also improves maintainability and debugging. When environments are fully separated, identifying network-related issues becomes easier because traffic flows are more predictable and controlled. This design approach is especially useful in sandbox systems, development platforms, CI/CD environments, and multi-tenant architectures where workload isolation directly impacts system reliability.\n\nExploring container networking changed the way I think about infrastructure design. Networking is no longer just a configuration step that happens after deployment — it is a core architectural decision that affects scalability, performance, and security from the beginning. The deeper I explored subnet isolation, the more I understood that modern infrastructure engineering is not only about running applications, but also about designing the invisible systems that allow those applications to operate safely and efficiently at scale."
   },
   {
     "name": "Architecting Multi-Role Systems (LMS)",
-    "image": "web-development.png"
+    "page": "architecting-multi-role-systems-lms",
+    "image": "b5.jpeg",
+    "sub": "Designing scalable learning platforms that balance usability, permissions, and complex workflows.",
+    "content": "Building a Learning Management System (LMS) is far more complex than creating a standard web application. What initially appears to be a simple educational platform quickly evolves into a large-scale system involving multiple user roles, permission hierarchies, workflow automation, and real-time interactions. As I worked on architecting an LMS platform, I realized that the real challenge was not just building features, but designing a system where different types of users could interact seamlessly within a single ecosystem.\n\nThe foundation of any multi-role system lies in understanding user responsibilities and boundaries. In an LMS environment, each role — Super Admin, Admin, Tutor, and Student — requires a unique experience tailored to their responsibilities. Administrators need powerful management tools, tutors require content delivery and student monitoring systems, while students need an interface focused on learning, progress tracking, and communication. Designing these experiences within one unified platform required careful planning of permissions, navigation flows, and backend access control.\n\nOne of the biggest architectural challenges was managing role-based authorization efficiently. As the number of features increased, maintaining clean permission structures became critical. Instead of hardcoding access logic into every component, I explored modular permission systems where roles and capabilities could be managed dynamically. This approach improved scalability and made the system easier to maintain as new features and user roles were introduced over time.\n\nAnother important aspect was designing the platform to handle interconnected workflows. Features like course management, attendance tracking, invoicing, notifications, student enquiries, and tutor assignments are not isolated modules — they constantly exchange data and depend on one another. Building these systems required thinking beyond individual pages and focusing on how information flows across the entire platform. This shifted my mindset from frontend-centric development toward system-level architecture and data orchestration.\n\nPerformance and usability also became major considerations during development. Multi-role platforms can become overwhelming if the interface is cluttered with unnecessary information. To solve this, I focused on creating role-specific dashboards and conditional rendering strategies so that users only interact with tools relevant to them. This improved both user experience and overall system clarity while reducing unnecessary complexity for end users.\n\nArchitecting a multi-role LMS taught me that scalable software is not just about writing efficient code — it is about designing adaptable systems. Every decision, from database structure to UI organization, directly affects how maintainable and extensible the platform becomes in the future. More importantly, it reinforced the idea that modern software engineering is deeply connected to workflow design, user psychology, and infrastructure planning. An LMS is not merely a collection of features; it is a digital ecosystem where technology, education, and system architecture converge."
   },
   {
     "name": "Advanced Computing: GPU Clusters & AI Datacenters",
-    "image": "web-development.png"
+    "page": "advanced-computing-gpu-clusters-ai-datacenters",
+    "image": "b6.jpeg",
+    "sub": "Exploring the infrastructure powering large-scale AI workloads, parallel computing, and the future of modern computing systems.",
+    "content": "The rise of artificial intelligence has transformed the way modern computing infrastructure is designed. Traditional servers built for general-purpose workloads are no longer sufficient for handling massive AI models, large-scale data processing, and parallel computation. As I explored the world of advanced computing, I became increasingly fascinated by GPU clusters and AI datacenters — the powerful systems that now drive machine learning, scientific simulations, and next-generation cloud platforms.\n\nMy interest initially began from a hardware and infrastructure perspective. I was curious about how large AI systems process enormous amounts of data so efficiently and why GPUs became central to this revolution. Unlike CPUs, which are optimized for sequential processing, GPUs are designed for massive parallel workloads. Thousands of smaller processing cores can execute operations simultaneously, making them highly effective for neural networks, matrix computations, and high-performance computing tasks. Understanding this architectural difference completely changed the way I viewed modern computing systems.\n\nAs I studied AI infrastructure further, I realized that GPU clusters are much more than collections of powerful graphics cards. Building scalable AI environments involves networking optimization, storage architecture, workload scheduling, cooling systems, and efficient resource allocation. In large-scale AI datacenters, every component must work together seamlessly to avoid bottlenecks. High-speed interconnects like NVLink and InfiniBand, distributed storage systems, and low-latency networking become critical for maintaining performance across multiple nodes.\n\nOne aspect that particularly interested me was the relationship between software platforms and physical infrastructure. AI workloads require orchestration systems capable of distributing tasks across multiple GPUs and servers dynamically. Technologies such as Kubernetes, containerized workloads, and GPU virtualization are now deeply integrated into AI infrastructure design. This intersection between software engineering and hardware architecture represents one of the most exciting areas in modern technology because it combines scalability, automation, and computational efficiency at an entirely different level.\n\nAnother fascinating challenge is energy efficiency and thermal management. AI datacenters consume enormous amounts of power, and maintaining stable operating conditions for dense GPU clusters is a major engineering problem. Advanced cooling systems, optimized airflow, and intelligent workload distribution are becoming increasingly important as AI models continue growing in size and complexity. These infrastructure considerations reveal how modern computing is no longer purely about software — it is equally about physical systems engineering.\n\nExploring GPU clusters and AI datacenters has expanded my understanding of what scalable computing truly means. It showed me that the future of technology depends not only on better algorithms, but also on the infrastructure capable of supporting them. From distributed computing to cloud-native orchestration, AI infrastructure represents the convergence of hardware engineering, networking, virtualization, and software architecture. It is a field where performance, scalability, and innovation continuously push the boundaries of what modern systems can achieve."
   },
   {
     "name": "Web application development (MERN , MEAN etc)",
-    "image": "web-development.png"
+    "page": "web-application-development-mern-mean-etc",
+    "image": "b1.jpeg",
+    "sub": "Transforming ideas into scalable digital products through modern JavaScript-based development stacks.",
+    "content": "Modern web application development has evolved far beyond static websites and simple backend systems. Today’s applications are expected to be dynamic, responsive, scalable, and capable of handling complex user interactions across multiple devices. My journey into full stack development introduced me to ecosystems like MERN and MEAN, which completely changed the way I approached software engineering by unifying frontend and backend development through JavaScript and TypeScript-based technologies.\n\nThe MERN stack — MongoDB, Express.js, React, and Node.js — became one of the most powerful tools in my development workflow. React’s component-based architecture made it possible to build highly interactive user interfaces while maintaining clean and reusable code structures. On the backend, Node.js and Express.js enabled fast and efficient API development using an event-driven architecture capable of handling modern web workloads efficiently. MongoDB added flexibility through its document-oriented database model, making it easier to work with dynamic application data.\n\nExploring the MEAN stack introduced a different perspective on full stack architecture. Angular’s structured ecosystem and TypeScript-first approach provided strong scalability for enterprise-grade applications. Unlike the flexibility-focused nature of React, Angular encourages a more opinionated development pattern with built-in routing, dependency injection, modular architecture, and advanced tooling. Working with both MERN and MEAN helped me understand how architectural decisions impact maintainability, scalability, and developer productivity in long-term projects.\n\nAs my experience expanded, I realized that web application development is not only about writing frontend components or backend APIs. Building production-ready systems requires authentication, state management, database optimization, responsive design, caching strategies, deployment pipelines, and cloud infrastructure integration. Every layer of the application must work together seamlessly to provide reliability, performance, and a smooth user experience. This systems-level thinking gradually shifted my mindset from feature development toward software architecture and platform-oriented engineering.\n\nAnother fascinating aspect of modern web development is how quickly the ecosystem evolves. Frameworks like Next.js have redefined frontend architecture by combining server-side rendering, static generation, and API handling into a unified framework. Containerized deployments, CI/CD pipelines, and cloud-native hosting platforms have also transformed how applications are developed and scaled. Staying updated in this environment requires continuous experimentation and adaptability, which keeps the field both challenging and exciting.\n\nFor me, web application development represents the perfect balance between creativity and engineering. It combines interface design, backend logic, scalability, and infrastructure into a single discipline capable of solving real-world problems through technology. Whether working on educational platforms, dashboard systems, developer tools, or experimental infrastructure projects, the goal remains the same — building scalable, efficient, and meaningful digital experiences that continue evolving alongside modern technology."
   },
   {
     "name": "Android/OIS application development using Flutter",
-    "image": "web-development.png"
+    "page": "android-ois-application-development-using-flutter",
+    "image": "b1.jpeg"
   },
   {
     "name": "Web site development using (Python Django, PHP, etc.)",
-    "image": "web-development.png"
+    "page": "web-site-development-using-python-django-php-etc",
+    "image": "b1.jpeg"
   },
   {
     "name": "Software testing using selenium (Selenium / Cypress)",
-    "image": "web-development.png"
+    "page": "software-testing-using-selenium-selenium-cypress",
+    "image": "b1.jpeg"
   },
   {
     "name": "Native Desktop application development using C++",
-    "image": "web-development.png"
+    "page": "native-desktop-application-development-using-c",
+    "image": "b1.jpeg"
   },
   {
     "name": "Source control (git / Helix core)",
-    "image": "web-development.png"
+    "page": "source-control-git-helix-core",
+    "image": "b1.jpeg"
   },
   {
     "name": "DevOps ",
-    "image": "web-development.png"
+    "page": "devops",
+    "image": "b1.jpeg"
   },
   {
     "name": "Cloud computing",
-    "image": "web-development.png"
+    "page": "cloud-computing",
+    "image": "b1.jpeg"
   },
   {
     "name": "Basic networking",
-    "image": "web-development.png"
+    "page": "basic-networking",
+    "image": "b1.jpeg"
   },
   {
     "name": "3D modeling Using (Blender / Maya 3D)",
-    "image": "web-development.png"
+    "page": "3d-modeling-using-blender-maya-3d",
+    "image": "b1.jpeg"
   },
   {
     "name": "Game development (Unreal engine / Unity)",
-    "image": "web-development.png"
+    "page": "game-development-unreal-engine-unity",
+    "image": "b1.jpeg"
   },
   {
     "name": "Cyber security",
-    "image": "web-development.png"
+    "page": "cyber-security",
+    "image": "b1.jpeg"
   },
   {
     "name": "Cryptography, Bloack chainain and Web3  (Hyper ledger)",
-    "image": "web-development.png"
+    "page": "cryptography-bloack-chainain-and-web3-hyper-ledger",
+    "image": "b1.jpeg"
   },
   {
     "name": "Linux and terminal automation",
-    "image": "web-development.png"
+    "page": "linux-and-terminal-automation",
+    "image": "b1.jpeg"
   },
   {
     "name": "Electronics and Computer Hardware",
-    "image": "web-development.png"
+    "page": "electronics-and-computer-hardware",
+    "image": "b1.jpeg"
   },
   {
     "name": "Data structures, Algorithms and optimisation",
-    "image": "web-development.png"
+    "page": "data-structures-algorithms-and-optimisation",
+    "image": "b1.jpeg"
   },
   {
     "name": "Internet of things",
-    "image": "web-development.png"
+    "page": "internet-of-things",
+    "image": "b1.jpeg"
   },
   {
     "name": "Never Stop Learning",
-    "image": "web-development.png"
+    "page": "never-stop-learning",
+    "image": "b1.jpeg"
   }
 ]

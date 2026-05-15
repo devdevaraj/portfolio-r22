@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { scrollTop, clientHeight } from "./scrollbar";
-import { effect } from "@preact/signals-react";
+import { effect, signal } from "@preact/signals-react";
 import { Canvas, GroupProps } from "@react-three/fiber";
 import TimelineScene from "./3d/timeline-scene";
 import { Group } from "three";
+
+export const timelineScroll = signal<number>(0);
 
 export default function Timeline() {
  const ref = useRef<HTMLElement>(null);
@@ -18,8 +20,10 @@ export default function Timeline() {
   const OH = height! - clientHeight.value;
   const TL = TS > scrollTop.value ? 0 : OS > OH ? OH : OS;
   scroll = TL / OH;
-  // console.log(scroll);
-  if (innerRef.current) innerRef.current.position.set(0, 0, 500 * scroll);
+  timelineScroll.value = scroll;
+  if (innerRef.current) {
+   innerRef.current.position.set(0, 0, 450 * scroll);
+  }
  })
  return (
   <main

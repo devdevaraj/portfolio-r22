@@ -726,4 +726,4 @@ export default function IntroModel(props: JSX.IntrinsicElements["group"]) {
  );
 }
 
-useGLTF.preload("/3d/intro-model.glb");
+useGLTF.preload("/3d/intro-model-new.glb");

@@ -42,7 +42,7 @@ export default function About() {
       >
        <LinkedinIcon onClick={() => window.open("https://www.linkedin.com/in/devdevaraj")} rotation={[1.54, 0, 0]} />
       </LightCanvas>
-      <LightCanvas
+      {/* <LightCanvas
        canvas={{ camera: { position: [0, 0, 2] }, children: <></> }}
        point={{ intensity: 8, position: [8, 6, 0] }}
        ambient={{ intensity: 4 }}
@@ -50,7 +50,7 @@ export default function About() {
        orbitControls={true}
       >
        <YoutubeIcon rotation={[1.54, 0, 0]} position={[0, 0, 0]} />
-      </LightCanvas>
+      </LightCanvas> */}
      </div>
     </div>
    </article>
