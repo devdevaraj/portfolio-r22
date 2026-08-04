@@ -1,10 +1,11 @@
 import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { effect } from '@preact/signals-react'
-import { useGLTF, useAnimations, Text3D } from '@react-three/drei'
+import { useGLTF, Html } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { GLTF } from 'three-stdlib'
 import { timelineScroll } from '../timeline'
+import { XTermTerminal, TerminalController } from './xterm-terminal'
 
 type GLTFResult = GLTF & {
  nodes: {
@@ -49,25 +50,12 @@ type GLTFResult = GLTF & {
 type ActionName = 'Take 001'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
-function wrapText(text: string, maxLineLength: number) {
- const words = text.split(' ');
- let currentLine = words[0] || '';
- const lines = [];
 
- for (let i = 1; i < words.length; i++) {
-  if (currentLine.length + words[i].length + 1 <= maxLineLength) {
-   currentLine += ' ' + words[i];
-  } else {
-   lines.push(currentLine);
-   currentLine = words[i];
-  }
- }
- if (currentLine) lines.push(currentLine);
- return lines;
-}
 
 export function Monitor({ props, title, desc }: { props: JSX.IntrinsicElements['group'], title: string, desc: string }) {
  const group = useRef<THREE.Group>(null)
+ const terminalControllerRef = useRef<TerminalController>(null);
+ const hasRunRef = useRef(false);
  const { nodes, materials, animations } = useGLTF('/3d/sci_fi_monitor.glb') as GLTFResult;
 
  const planeMaterial = React.useMemo(() => {
@@ -89,7 +77,18 @@ export function Monitor({ props, title, desc }: { props: JSX.IntrinsicElements['
 
  let rotation = 0;
  effect(() => {
-  const buffer = ((timelineScroll.value * 450) + (props.position as any)?.z!) | 0;
+  const zPosition = (props.position as any)?.z || 0;
+  const isFirst = zPosition === 0;
+  const buffer = ((timelineScroll.value * 450) + zPosition) | 0;
+
+  if (buffer > -100 && !hasRunRef.current && !isFirst) {
+   hasRunRef.current = true;
+   terminalControllerRef.current?.startSequence();
+  } else if (buffer <= -100 && hasRunRef.current && !isFirst) {
+   hasRunRef.current = false;
+   terminalControllerRef.current?.clearSequence();
+  }
+
   if (0 < buffer && buffer < 50) {
    rotation = buffer * Math.PI * 0.005;
    const xPos = (props.position as any).x;
@@ -319,37 +318,9 @@ export function Monitor({ props, title, desc }: { props: JSX.IntrinsicElements['
             userData={{ name: 'pCube1_TV_MTL_0' }}
            />
           </group>
-          <group position={[-5, 8.5, 0]}>
-           <Text3D
-            font={"/fonts/google-sans.json"}
-            size={0.7}
-            height={0.08}
-            curveSegments={32}
-            bevelEnabled
-            bevelThickness={0.04}
-            bevelSize={0.005}
-            bevelSegments={8}
-           >
-            {title}
-            <meshBasicMaterial color="#cceeff" />
-           </Text3D>
-           <group position={[0, -1.5, 0]}>
-            {wrapText(desc, 35).map((line, index) => (
-             <Text3D
-              key={index}
-              position={[0, -index * 0.8, 0]}
-              font={"/fonts/google-sans.json"}
-              size={0.4}
-              height={0.08}
-              curveSegments={4}
-              bevelEnabled={false}
-             >
-              {line}
-              <meshBasicMaterial color="#cceeff" />
-             </Text3D>
-            ))}
-           </group>
-          </group>
+          <Html transform position={[0, 5.8, 0]} scale={0.9}>
+           <XTermTerminal title={title} desc={desc} ref={terminalControllerRef} isFirst={((props.position as any)?.z || 0) === 0} />
+          </Html>
          </group>
          <group
           name="Dec_Top"

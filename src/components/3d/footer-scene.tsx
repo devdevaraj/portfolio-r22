@@ -38,7 +38,7 @@ export default function FooterScene({ mainRef }: { mainRef: RefObject<HTMLElemen
         <group position={[0, height / 2, 0]}>
           <Center position={[0, 0, 15]}>
             <Text3D
-              position={[0, 0, 0]}
+              position={[0, 0, 20]}
               rotation={[0, 0, 0]}
               scale={[1, 1, 1]}
               font="/fonts/google-sans.json"

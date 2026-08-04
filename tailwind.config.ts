@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 // import { _skillsLength } from "./src/data/skills";
 
-const breakPoints = ["","sm:","md:","lg:","xl:"];
-const delays = new Array(6).fill(100).map((i,j) => i*j);
+const breakPoints = ["", "sm:", "md:", "lg:", "xl:"];
+const delays = new Array(6).fill(100).map((i, j) => i * j);
 const baseDelays = delays.map(i => `delay-[${i}ms]`);
 const delaySafelist = breakPoints.map(bp => baseDelays.map(bd => `${bp}${bd}`)).flat();
 
@@ -23,6 +23,12 @@ const config: Config = {
   safelist: safeList,
   theme: {
     extend: {
+      screens: {
+        "2xl": "1536px",
+        "3xl": "1792px",
+        "4xl": "2048px",
+        "5xl": "2304px",
+      },
       aspectRatio: {
         "portrait": "4/5"
       },
@@ -50,7 +56,7 @@ const config: Config = {
           textShadow: value,
         }),
       },
-      { values: theme('textShadow')})
+        { values: theme('textShadow') })
     }),
     require('tailwindcss'),
     require('autoprefixer'),

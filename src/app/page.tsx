@@ -23,7 +23,7 @@ export default function Home() {
       <MainFocus />
       <Technologies />
       <Timeline />
-      {/* <Blogs /> */}
+      <Blogs />
       <Portfolio />
       {/* <Intrests /> */}
       <Contact />

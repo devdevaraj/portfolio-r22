@@ -13,12 +13,12 @@ const _cubes = [
 ];
 
 export default function TimelineScene({ innerRef }: { innerRef: Ref<Group> }) {
-  const { pointer, camera } = useThree();
-  useFrame((state, delta) => {
-    const x = pointer.x / window.innerWidth;
-    const y = pointer.y / window.innerHeight;
-    camera.rotation.set(x * 10, y * 10, 0);
-  });
+  // const { pointer, camera } = useThree();
+  // useFrame((state, delta) => {
+  // const x = pointer.x / window.innerWidth;
+  // const y = pointer.y / window.innerHeight;
+  // camera.rotation.set(x * 10, y * 10, 0);
+  // });
   return (
     <group ref={innerRef}>
       <ambientLight intensity={0.2} />

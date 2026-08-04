@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { scrollTop, clientHeight } from "./scrollbar";
 import { effect, signal } from "@preact/signals-react";
-import { Canvas, GroupProps } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import TimelineScene from "./3d/timeline-scene";
 import { Group } from "three";
 

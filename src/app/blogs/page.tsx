@@ -69,7 +69,7 @@ export default function BlogsPage() {
           </h2>
          </section>
          <section className="w-full h-[2px] bg-gradient-to-r from-cyan-500 to-indigo-500 opacity-50 group-hover:opacity-100 transition-opacity duration-300"></section>
-         <p className="flex-grow w-full px-4 py-2 text-[9px] text-slate-400">{item.sub}</p>
+         <p className="flex-grow w-full px-4 py-2 text-[9.5px] text-slate-400">{item.sub}</p>
          <Link
           className="m-3 mb-4 text-[0.65rem] 2xl:text-xs font-semibold tracking-widest text-cyan-300 bg-cyan-950/40 border border-cyan-800/60 hover:bg-cyan-500 hover:text-white hover:border-cyan-400 px-5 py-2 rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] text-center"
           href={`/blogs/${item.page}`}>

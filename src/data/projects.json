@@ -70,12 +70,21 @@
   },
   {
     "name": "Mongo Bash",
-    "page": "#",
-    "assets_path": "/skills",
-    "thumbnail": "web-development.png",
-    "images": [],
-    "tnt": [],
-    "descriptions": ""
+    "page": "mongobash",
+    "assets_path": "/projects/mongobash",
+    "thumbnail": "thumbnail.png",
+    "images": [
+      "image1.png",
+      "image2.png",
+      "image3.png"
+    ],
+    "tnt": [
+      "bash",
+      "golang"
+    ],
+    "descriptions": "MongoBash is an open-source command-line utility built using Bash and Go that brings a filesystem-like experience to working with MongoDB. The project allows developers to navigate and interact with MongoDB databases using familiar Unix-style commands such as ls, cd, cat, and other shell-inspired operations, making database exploration more intuitive and efficient. Designed for developers who prefer terminal-based workflows, MongoBash simplifies collection browsing, document inspection, and database navigation through a lightweight and developer-friendly interface. By combining the scripting flexibility of Bash with the performance and concurrency capabilities of Go, the project delivers a fast, portable, and extensible tool for managing MongoDB environments directly from the command line.",
+    "url": "https://github.com/devaraj-s/MongoBash",
+    "source_url": "https://github.com/devdevaraj/mongobash"
   },
   {
     "name": "Take notes",
